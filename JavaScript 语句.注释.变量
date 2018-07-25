@@ -1,0 +1,73 @@
+下面的 JavaScript 语句向 id="demo" 的 HTML 元素输出文本 "Hello World"：
+document.getElementById("demo").innerHTML="Hello World";
+分号 ;
+分号用于分隔 JavaScript 语句。
+通常我们在每条可执行的语句结尾添加分号。
+使用分号的另一用处是在一行中编写多条语句。
+提示：您也可能看到不带有分号的案例。
+在 JavaScript 中，用分号来结束语句是可选的。
+
+空格
+JavaScript 会忽略多余的空格。您可以向脚本添加空格，来提高其可读性。下面的两行代码是等效的：
+var name="Hello";
+var name = "Hello";
+
+对代码行进行折行
+您可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：
+document.write("Hello \
+World!");
+不过，您不能像这样折行：
+document.write \
+("Hello World!");
+
+
+
+JavaScript 注释
+JavaScript 不会执行注释。
+我们可以添加注释来对 JavaScript 进行解释，或者提高代码的可读性。
+单行注释以 // 开头。
+
+JavaScript 多行注释
+多行注释以 /* 开始，以 */ 结尾。
+
+
+
+JavaScript 变量
+JavaScript 数据类型
+JavaScript 变量还能保存其他数据类型，比如文本值 (name="Bill Gates")。
+在 JavaScript 中，类似 "Bill Gates" 这样一条文本被称为字符串。
+JavaScript 变量有很多种类型，但是现在，我们只关注数字和字符串。
+当您向变量分配文本值时，应该用双引号或单引号包围这个值。
+当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。
+
+我们使用 var 关键词来声明变量：
+var carname;
+变量声明之后，该变量是空的（它没有值）。
+如需向变量赋值，请使用等号：
+<script>
+function myFunction()
+{
+var carname="Volvo";
+document.getElementById("demo").innerHTML=carname;//输出为Volvo
+}
+</script>
+
+一条语句，多个变量
+您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：
+var name="Gates", age=56, job="CEO";
+声明也可横跨多行：
+var name="Gates",
+age=56,
+job="CEO";
+
+Value = undefined
+在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。
+在执行过以下语句后，变量 carname 的值将是 undefined：
+var carname;
+
+重新声明 JavaScript 变量
+如果重新声明 JavaScript 变量，该变量的值不会丢失：
+在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：
+var carname="Volvo";
+var carname;
+
