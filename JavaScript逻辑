@@ -1,0 +1,196 @@
+Boolean（逻辑）对象用于将非逻辑值转换为逻辑值（true 或者 false）。
+创建 Boolean 对象的语法：
+new Boolean(value);	//构造函数
+Boolean(value);		//转换函数
+Boolean 对象属性
+属性	描述
+constructor	返回对创建此对象的 Boolean 函数的引用
+prototype	使您有能力向对象添加属性和方法。
+Boolean 对象方法
+方法	描述
+toSource()	返回该对象的源代码。
+toString()	把逻辑值转换为字符串，并返回结果。
+valueOf()	返回 Boolean 对象的原始值。
+Boolean 对象描述
+在 JavaScript 中，布尔值是一种基本的数据类型。Boolean 对象是一个将布尔值打包的布尔对象。Boolean 对象主要用于提供将布尔值转换成字符串的 toString() 方法。
+当调用 toString() 方法将布尔值转换成字符串时（通常是由 JavaScript 隐式地调用），JavaScript 会内在地将这个布尔值转换成一个临时的 Boolean 对象，然后调用这个对象的 toString() 方法。
+Boolean 对象
+您可以将 Boolean 对象理解为一个产生逻辑值的对象包装器。
+Boolean（逻辑）对象用于将非逻辑值转换为逻辑值（true 或者 false）。
+创建 Boolean 对象
+使用关键词 new 来定义 Boolean 对象。下面的代码定义了一个名为 myBoolean 的逻辑对象：
+var myBoolean=new Boolean()
+注释：如果逻辑对象无初始值或者其值为 0、-0、null、""、false、undefined 或者 NaN，那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 "false" 时）！
+
+
+
+
+JavaScript Math（算数）对象
+Math（算数）对象的作用是：执行常见的算数任务。
+
+如何使用 round()。
+<html>
+<body>
+<script type="text/javascript">
+document.write(Math.round(0.60) + "<br />")//1
+document.write(Math.round(0.50) + "<br />")//1
+document.write(Math.round(0.49) + "<br />")//0
+document.write(Math.round(-4.40) + "<br />")//-4
+document.write(Math.round(-4.60))//-5
+</script>
+</body>
+</html>
+
+如何使用 random() 来返回 0 到 1 之间的随机数。
+<body>
+<script type="text/javascript">
+document.write(Math.random())
+</script>
+</body>
+</html>
+
+如何使用 max() 来返回两个给定的数中的较大的数。（在 ECMASCript v3 之前，该方法只有两个参数。）
+<html>
+<body>
+<script type="text/javascript">
+document.write(Math.max(5,7) + "<br />")
+document.write(Math.max(-3,5) + "<br />")
+document.write(Math.max(-3,-5) + "<br />")
+document.write(Math.max(7.25,7.30))
+</script>
+</body>
+</html>
+
+如何使用 min() 来返回两个给定的数中的较小的数。（在 ECMASCript v3 之前，该方法只有两个参数。）
+<html>
+<body>
+<script type="text/javascript">
+document.write(Math.min(5,7) + "<br />")
+document.write(Math.min(-3,5) + "<br />")
+document.write(Math.min(-3,-5) + "<br />")
+document.write(Math.min(7.25,7.30))
+</script>
+</body>
+</html>
+
+Math 对象
+Math（算数）对象的作用是：执行普通的算数任务。
+Math 对象提供多种算数值类型和函数。无需在使用这个对象之前对它进行定义。
+算数值
+JavaScript 提供 8 种可被 Math 对象访问的算数值：
+常数
+圆周率
+2 的平方根
+1/2 的平方根
+2 的自然对数
+10 的自然对数
+以 2 为底的 e 的对数
+以 10 为底的 e 的对数
+这是在 Javascript 中使用这些值的方法：（与上面的算数值一一对应）
+Math.E
+Math.PI
+Math.SQRT2
+Math.SQRT1_2
+Math.LN2
+Math.LN10
+Math.LOG2E
+Math.LOG10E
+
+函数（方法）实例：
+下面的例子使用了 Math 对象的 round 方法对一个数进行四舍五入。
+document.write(Math.round(4.7))
+上面的代码输出为：5
+下面的例子使用了 Math 对象的 random() 方法来返回一个介于 0 和 1 之间的随机数：
+document.write(Math.random())
+上面的代码输出为：
+0.9370844220218102
+下面的例子使用了 Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 10 之间的随机数：
+document.write(Math.floor(Math.random()*11)) 
+上面的代码输出为：3
+
+
+
+JavaScript RegExp 对象
+RegExp 对象用于规定在文本中检索的内容。
+什么是 RegExp？
+RegExp 是正则表达式的缩写。
+当您检索某个文本时，可以使用一种模式来描述要检索的内容。RegExp 就是这种模式。
+简单的模式可以是一个单独的字符。
+更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。
+您可以规定字符串中的检索位置，以及要检索的字符类型，等等。
+
+定义 RegExp
+RegExp 对象用于存储检索模式。
+通过 new 关键词来定义 RegExp 对象。以下代码定义了名为 patt1 的 RegExp 对象，其模式是 "e"：
+var patt1=new RegExp("e");
+当您使用该 RegExp 对象在一个字符串中检索时，将寻找的是字符 "e"。
+
+RegExp 对象的方法
+RegExp 对象有 3 个方法：test()、exec() 以及 compile()。
+
+test()
+test() 方法检索字符串中的指定值。返回值是 true 或 false。
+例子：
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free")); 
+
+<html>
+<body>
+<script type="text/javascript">
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));//true
+</script>
+</body>
+</html>
+
+exec()
+exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。
+例子 1：
+var patt1=new RegExp("e");
+document.write(patt1.exec("The best things in life are free")); 
+由于该字符串中存在字母 "e"，以上代码的输出将是：e
+
+<html>
+<body>
+<script type="text/javascript">
+var patt1=new RegExp("y");//找得到的为该字母，找不到的为null;
+document.write(patt1.exec("The best things in life are free"));
+</script>
+</body>
+</html>
+
+您可以向 RegExp 对象添加第二个参数，以设定检索。例如，如果需要找到所有某个字符的所有存在，则可以使用 "g" 参数 ("global")。
+在使用 "g" 参数时，exec() 的工作原理如下：
+找到第一个 "e"，并存储其位置
+如果再次运行 exec()，则从存储的位置开始检索，并找到下一个 "e"，并存储其位置
+var patt1=new RegExp("e","g");
+do
+{
+result=patt1.exec("The best things in life are free");
+document.write(result);
+}
+while (result!=null) 
+由于这个字符串中 6 个 "e" 字母，代码的输出将是：eeeeeenull
+
+compile()
+compile() 方法用于改变 RegExp。
+compile() 既可以改变检索模式，也可以添加或删除第二个参数。
+例子：
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+patt1.compile("d");
+document.write(patt1.test("The best things in life are free"));
+由于字符串中存在 "e"，而没有 "d"，以上代码的输出是：truefalse
+<html>
+<body>
+<script type="text/javascript">
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+patt1.compile("d");
+document.write(patt1.test("The best things in life are free"));
+</script>
+</body>
+</html>
+
+
+
