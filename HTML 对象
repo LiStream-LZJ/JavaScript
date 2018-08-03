@@ -1,0 +1,451 @@
+HTML DOM Anchor 对象
+
+Anchor 对象
+Anchor 对象表示 HTML 超链接。
+在 HTML 文档中 <a> 标签每出现一次，就会创建 Anchor 对象。
+锚可用于创建指向另一个文档的链接（通过 href 属性），或者创建文档内的书签（通过 name 属性）。
+您可以通过搜索 Document 对象中的 anchors[] 数组来访问锚，或者使用 document.getElementById()。
+
+Anchor 对象的属性
+属性	描述
+accessKey	设置或返回访问一个链接的快捷键。
+charset	设置或返回被链接资源的字符集。
+coords	设置或返回逗号分隔列表，包含了图像映射中链接的坐标。
+href	设置或返回被链接资源的 URL。
+hreflang	设置或返回被链接资源的语言代码。
+id	设置或返回一个链接的 id。
+innerHTML	设置或返回一个链接的内容。
+name	设置或返回一个链接的名称。
+rel	设置或返回当前文档与目标 URL 之间的关系。
+rev	设置或返回目标 URL 与之间当前文档的关系。
+shape	设置或返回图像映射中某个链接的形状。
+tabIndex	设置或返回某个链接的 Tab 键控制次序。
+target	设置或返回在何处打开链接。
+type	设置或返回被链接资源的 MIME 类型。
+
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+Anchor 对象的方法
+方法	描述
+blur()	把焦点从链接上移开。
+focus()	给链接应用焦点。
+
+
+
+HTML DOM Area 对象
+
+Area 对象
+Area 对象代表图像映射的一个区域（图像映射指的是带有可点击区域的图像）
+在 HTML 文档中 <area> 标签每出现一次，就会创建一个 Area 对象。
+
+Area 对象的属性
+属性	描述
+accessKey	设置或返回访问某个区域的快捷键。
+alt	设置或返回当浏览器无法显示某个区域时的替换文字。
+coords	设置或返回图像映射中可点击区域的坐标。
+hash	设置或返回某个区域中 URL 的锚部分。
+host	设置或返回某个区域中 URL 的主机名和端口。
+href	设置或返回图像映射中链接的 URL。
+id	设置或返回某个区域的 id。
+noHref	设置或返回某个区域是否应是活动的还是非活动的。
+pathname	设置或返回某个区域中的 URL 的路径名。
+protocol	设置或返回某个区域中的 URL 的协议。
+search	设置或返回某个区域中 URL 的查询字符串部分。
+shape	设置或返回图像映射中某个区域的形状。
+tabIndex	设置或返回某个区域的 tab 键控制次序。
+target	设置或返回在何处打开区域中的 link-URL。
+
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title。
+
+
+
+HTML DOM Audio 对象
+
+Audio 对象
+Audio 对象是 HTML5 中的新对象。
+
+Audio 对象表示 HTML <audio> 元素。
+
+访问 Audio 对象
+您可以通过使用 getElementById() 来访问 <audio> 元素：
+var x = document.getElementById("myAudio");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 AUDIO 元素</h3>
+<audio id="myAudio" controls>
+  <source src="/i/horse.ogg" type="audio/ogg">
+  <source src="/i/horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<p>请点击按钮来获得以秒计的音频时长。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myAudio").duration;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Audio 对象
+您可以通过使用 document.createElement() 方法来创建 <audio> 元素：
+var x = document.createElement("AUDIO");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 AUDIO 元素</h3>
+<p>请点击按钮来创建 AUDIO 元素，该元素将播放 .ogg 文件格式的声音。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var x = document.createElement("AUDIO");
+x.setAttribute("src", "/i/horse.mp3");
+x.setAttribute("controls", "controls");
+document.body.appendChild(x);
+document.getElementById("demo").innerHTML = "<b>注释：</b>IE 和 Safari 不支持 .ogg 文件格式。这只是一个例子。如需使其在所有浏览器中运行，您应该在 audio 元素中使用 source 元素。";
+}
+</script>
+</body>
+</html>
+
+Audio 对象属性
+属性	描述
+audioTracks	返回表示可用音频轨道的 AudioTrackList 对象。
+autoplay	设置或返回是否在就绪（加载完成）后随即播放音频。
+buffered	返回表示音频已缓冲部分的 TimeRanges 对象。
+controller	返回表示音频当前媒体控制器的 MediaController 对象。
+controls	设置或返回音频是否应该显示控件（比如播放/暂停等）。
+crossOrigin	设置或返回音频的 CORS 设置。
+currentSrc	返回当前音频的 URL。
+currentTime	设置或返回音频中的当前播放位置（以秒计）。
+defaultMuted	设置或返回音频默认是否静音。
+defaultPlaybackRate	设置或返回音频的默认播放速度。
+duration	返回音频的长度（以秒计）。
+ended	返回音频的播放是否已结束。
+error	返回表示音频错误状态的 MediaError 对象。
+loop	设置或返回音频是否应在结束时再次播放。
+mediaGroup	设置或返回音频所属媒介组合的名称。
+muted	设置或返回是否关闭声音。
+networkState	返回音频的当前网络状态。
+paused	设置或返回音频是否暂停。
+playbackRate	设置或返回音频播放的速度。
+played	返回表示音频已播放部分的 TimeRanges 对象。
+preload	设置或返回音频的 preload 属性的值。
+readyState	返回音频当前的就绪状态。
+seekable	返回表示音频可寻址部分的 TimeRanges 对象。
+seeking	返回用户当前是否正在音频中进行查找。
+src	设置或返回音频的 src 属性的值。
+textTracks	返回表示可用文本轨道的 TextTrackList 对象。
+volume	设置或返回音频的音量。
+
+Audio 对象方法
+方法	描述
+addTextTrack()	向音频添加新的文本轨道。
+canPlayType()	检查浏览器是否能够播放指定的音频类型。
+fastSeek()	在音频播放器中指定播放时间。
+getStartDate()	返回新的 Date 对象，表示当前时间线偏移量。
+load()	重新加载音频元素。
+play()	开始播放音频。
+pause()	暂停当前播放的音频。
+标准属性和事件
+Audio 对象支持标准属性和事件。
+
+相关页面
+HTML 教程：HTML5 音频
+HTML 参考手册：HTML <audio> 标签
+
+
+HTML DOM Base 对象
+
+Base 对象
+Base 对象代表 HTML 的 base 元素。
+
+在 HTML 文档中 <base> 每出现一次，Base 对象就会被创建。
+
+Base 对象属性
+属性	描述
+href	设置或返回针对页面中所有链接的基准 URL。
+id	设置或返回 <base> 元素的 id。
+target	设置或返回针对页面中所有链接的默认目标框架。
+
+
+
+HTML DOM Body 对象
+
+Body 对象
+Body 对象代表文档的主体 (HTML body) 。
+
+Body 对象的属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+id	设置或返回 body 的 id。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的咨询性的标题。
+
+
+
+HTML DOM Blockquote 对象
+
+Blockquote 对象
+Blockquote 对象表示 HTML <blockquote> 元素。
+
+访问 Blockquote 对象
+您可以通过使用 getElementById() 来访问 <blockquote> 元素：
+var x = document.getElementById("myBlockquote");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 BLOCKQUOTE 元素</h3>
+<p>Here is a quote from WWF's website:</p>
+<blockquote id="myBlockquote" cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature.
+</blockquote>
+<p>请点击按钮来获得引用的 URL。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myBlockquote").cite;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Blockquote 对象
+您可以通过使用 document.createElement() 方法来创建 <blockquote> 元素：
+var x = document.createElement("BLOCKQUOTE");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 BLOCKQUOTE 元素</h3>
+<p>请点击按钮来创建 BLOCKQUOTE 元素，此引用的来源是 worldwildlife.org。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("BLOCKQUOTE");
+var t = document.createTextNode("For 50 years, WWF has been protecting the future of nature.");
+x.setAttribute("cite", "http://www.worldwildlife.org/who/index.html");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Blockquote 对象属性
+属性	描述
+cite	设置或返回引用的 cite 属性的值。
+标准属性和事件
+Blockquote 对象支持标准属性和事件。
+
+相关页面
+HTML 参考手册：HTML <blockquote> 标签
+JavaScript 参考手册：HTML DOM Quote 对象
+
+
+
+HTML DOM Button 对象
+
+Button 对象
+Button 对象代表一个按钮。
+
+在 HTML 文档中 <button> 标签每出现一次，Button 对象就会被创建。
+
+Button 对象的属性
+属性	描述
+accessKey	设置或返回访问某个按钮的快捷键。
+disabled	设置或返回是否禁用按钮。
+form	返回对包含按钮的表单的引用。
+id	设置或返回按钮的 id。
+name	设置或返回按钮的名称。
+tabIndex	设置或返回按钮的 Tab 键控制次序。
+type	返回按钮的表单类型。
+value	设置或返回显示在按钮上的文本。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Canvas 对象
+Canvas 对象
+Canvas 对象表示一个 HTML 画布元素 - <canvas>。它没有自己的行为，但是定义了一个 API 支持脚本化客户端绘图操作。
+
+你可以直接在该对象上指定宽度和高度，但是，其大多数功能都可以通过 CanvasRenderingContext2D 对象获得。 这是通过 Canvas 对象的 getContext() 方法并且把直接量字符串 "2d" 作为唯一的参数传递给它而获得的。
+
+<canvas> 标记在 Safari 1.3 中引入，在制作此参考页时，它在 Firefox 1.5 和 Opera 9 中也得到了支持。在 IE 中，<canvas> 标记及其 API 可以使用位于 excanvas.sourceforge.net 的 ExplorerCanvas 开源项目来模拟。
+
+提示：如果希望学习如何使用 <canvas> 来绘制图形，可以访问 Mozilla 提供的 Canvas 教程（英文）以及相应的 中文 Canvas 教程。
+
+Canvas 对象的属性
+height 属性
+画布的高度。和一幅图像一样，这个属性可以指定为一个整数像素值或者是窗口高度的百分比。当这个值改变的时候，在该画布上已经完成的任何绘图都会擦除掉。默认值是 300。
+
+width 属性
+画布的宽度。和一幅图像一样，这个属性可以指定为一个整数像素值或者是窗口宽度的百分比。当这个值改变的时候，在该画布上已经完成的任何绘图都会擦除掉。默认值是 300。
+
+Canvas 对象的方法
+方法	描述
+getContext()	返回一个用于在画布上绘图的环境。
+
+
+
+HTML DOM Column 对象
+
+Column 对象
+Column 对象表示 HTML <col> 元素。
+
+访问 Column 对象
+您可以通过使用 getElementById() 来访问 <col> 元素：
+var x = document.getElementById("myCol");
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td
+{
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<h3>关于如何访问 COL 元素的一个演示</h3>
+<table>
+  <colgroup>
+    <col id="myCol" span="2" style="background-color:red">
+    <col style="background-color:yellow">
+  </colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>5869207</td>
+    <td>My first CSS</td>
+    <td>$49</td>
+  </tr>
+</table>
+<p>请点击按钮，来获得 COL 元素应该横跨的列数。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myCol").span;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Column 对象
+您可以通过使用 document.createElement() 方法来创建 <col> 元素：
+
+var x = document.createElement("COL");
+Column 对象属性
+属性	描述
+span	设置或返回列的 span 属性的值。
+标准属性和事件
+Column 对象支持标准属性和事件。
+
+
+
+HTML DOM ColumnGroup 对象
+
+ColumnGroup 对象
+ColumnGroup 对象表示 HTML <colgroup> 元素。
+
+访问 ColumnGroup 对象
+您可以通过使用 getElementById() 来访问 <colgroup> 元素：
+var x = document.getElementById("myColgroup");
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td
+{
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<h3>关于如何访问 COLGROUP 元素的一个演示</h3>
+<table>
+  <colgroup id="myColgroup" span="2" style="background:red"></colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>5869207</td>
+    <td>My first CSS</td>
+    <td>$49</td>
+  </tr>
+</table>
+<p>请点击按钮，来获得 COLGROUP 元素应该横跨的列数。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myColgroup").span;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 ColumnGroup 对象
+您可以通过使用 document.createElement() 方法来创建 <colgroup> 元素：
+
+var x = document.createElement("COLGROUP");
+ColumnGroup 对象属性
+属性	描述
+span	设置或返回列的 span 属性的值。
+标准属性和事件
+ColumnGroup 对象支持标准属性和事件。
+
+
+
+HTML DOM Datalist 对象
