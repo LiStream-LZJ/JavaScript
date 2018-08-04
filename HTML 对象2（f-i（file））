@@ -1,0 +1,713 @@
+HTML DOM Fieldset 对象
+
+Fieldset 对象
+Fieldset 对象表示 HTML <fieldset> 元素。
+
+访问 Fieldset 对象
+您可以通过使用 getElementById() 来访问 <fieldset> 元素：
+var x = document.getElementById("myFieldset");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 FIELDSET 元素</h3>
+<fieldset id="myFieldset" name="personalia">
+  Name: <input type="text" name="username"><br>
+  Email: <input type="text" name="usermail"><br>
+</fieldset>
+<p>点击按钮来禁用 fieldset。</p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>Internet Explorer 和 Safari 不完全支持 Fieldset 对象的 disabled 属性。</p>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myFieldset");
+x.disabled = true;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Fieldset 对象。
+
+创建 Fieldset 对象
+您可以通过使用 document.createElement() 方法来创建 <fieldset> 元素：
+var x = document.createElement("FIELDSET");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 FIELDSET 元素</h3>
+<p>点击按钮来创建包含文本的 FIELDSET 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("FIELDSET");
+var t = document.createTextNode("Insert content here...");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Fieldset 对象属性
+属性	描述
+disabled	设置或返回 fieldset 是否被禁用。
+form	返回对包含该 fieldset 的表单的引用。
+name	设置或返回 fieldset 的 name 属性值。
+type	返回 fieldset 的表单元素类型。
+
+
+
+HTML DOM Form 对象
+Form 对象
+Form 对象代表一个 HTML 表单。
+
+在 HTML 文档中 <form> 每出现一次，Form 对象就会被创建。
+
+Form 对象集合
+集合	描述
+elements[]	包含表单中所有元素的数组。
+Form 对象属性
+属性	描述
+acceptCharset	服务器可接受的字符集。
+action	设置或返回表单的 action 属性。
+enctype	设置或返回表单用来编码内容的 MIME 类型。
+id	设置或返回表单的 id。
+length	返回表单中的元素数目。
+method	设置或返回将数据发送到服务器的 HTTP 方法。
+name	设置或返回表单的名称。
+target	设置或返回表单提交结果的 Frame 或 Window 名。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Form 对象方法
+方法	描述
+reset()	把表单的所有输入元素重置为它们的默认值。
+submit()	提交表单。
+Form 对象事件句柄
+事件句柄	描述
+onreset	在重置表单元素之前调用。
+onsubmit	在提交表单之前调用。
+
+
+
+HTML DOM Frame 对象
+Frame 对象
+Frame 对象代表一个 HTML 框架。
+
+在 HTML 文档中 <frame> 每出现一次，就会创建一个 Frame对象。
+
+Frame 对象的属性
+属性	描述
+contentDocument	容纳框架的内容的文档。
+frameBorder	设置或返回是否显示框架周围的边框。
+id	设置或返回框架的 id。
+longDesc	设置或返回指向包含框架内容描述文档的 URL。
+marginHeight	设置或返回框架的顶部和底部页空白。
+marginWidth	设置或返回框架的左边缘和右边缘的空白。
+name	设置或返回框架的名称。
+noResize	设置或返回框架是否可调整大小。
+scrolling	设置或返回框架是否可拥有滚动条。
+src	设置或返回应被加载到框架中的文档的 URL。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Frameset 对象
+Frameset 对象
+Frameset 对象代表 HTML 框架集。
+
+Frameset 对象的属性
+属性	描述
+cols	设置或返回框架集中列的数目。
+id	设置或返回框架集的 id。
+rows	设置或返回框架集中行的数目。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM IFrame 对象
+IFrame 对象
+IFrame 对象代表一个 HTML 的内联框架。
+
+在 HTML 文档中 <iframe> 每出现一次，一个 IFrame 对象就会被创建。
+
+IFrame 对象的属性
+属性	描述
+align	根据周围的文字排列 iframe。
+contentDocument	容纳框架的内容的文档。
+frameBorder	设置或返回是否显示 iframe 周围的边框。
+height	设置或返回 iframe 的高度。
+id	设置或返回 iframe 的 id。
+longDesc	设置或返回描述 iframe 内容的文档的 URL。
+marginHeight	设置或返回 iframe 的顶部和底部的页空白。
+marginWidth	设置或返回 iframe 的左侧和右侧的页空白。
+name	设置或返回 iframe 的名称。
+scrolling	设置或返回 iframe 是否可拥有滚动条。
+src	设置或返回应载入 iframe 中的文档的 URL。
+width	设置或返回 iframe 的宽度。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Image 对象
+Image 对象
+Image 对象代表嵌入的图像。
+
+<img> 标签每出现一次，一个 Image 对象就会被创建。
+
+Image 对象的属性
+属性	描述
+align	设置或返回与内联内容的对齐方式。
+alt	设置或返回无法显示图像时的替代文本。
+border	设置或返回图像周围的边框。
+complete	返回浏览器是否已完成对图像的加载。
+height	设置或返回图像的高度。
+hspace	设置或返回图像左侧和右侧的空白。
+id	设置或返回图像的 id。
+isMap	返回图像是否是服务器端的图像映射。
+longDesc	设置或返回指向包含图像描述的文档的 URL。
+lowsrc	设置或返回指向图像的低分辨率版本的 URL。
+name	设置或返回图像的名称。
+src	设置或返回图像的 URL。
+useMap	设置或返回客户端图像映射的 usemap 属性的值。
+vspace	设置或返回图像的顶部和底部的空白。
+width	设置或返回图像的宽度。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+title	设置或返回元素的 title。
+Image 对象的事件句柄
+事件句柄	描述
+onabort	当用户放弃图像的装载时调用的事件句柄。
+onerror	在装载图像的过程中发生错误时调用的事件句柄。
+onload	当图像装载完毕时调用的事件句柄。
+
+
+
+HTML DOM Ins 对象
+Ins 对象
+Ins 对象表示 HTML <ins> 元素。
+
+访问 Ins 对象
+您可以通过使用 getElementById() 来访问 <ins> 元素：
+
+!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Ins 元素</h3>
+<p><ins id="myIns" cite="why_inserted.htm">这是一段插入的文本。</ins></p>
+<p>点击按钮来获得页面的 URL，该页面解释了文本被删除的原因。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myIns").cite;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+var x = document.getElementById("myIns");
+
+创建 Ins 对象
+您可以通过使用 document.createElement() 方法来创建 <ins> 元素：
+var x = document.createElement("INS");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Ins 元素</h3>
+<p>点击按钮来创建 INS 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("INS");
+var t = document.createTextNode("被插入的文本");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Ins 对象属性
+属性	描述
+cite	设置或返回被插入文本的 cite 属性的值。
+dateTime	设置或返回被插入文本的 datetime 属性的值。
+
+
+
+HTML DOM Button 对象
+Button 对象
+Button 对象代表 HTML 文档中的一个按钮。
+
+该元素没有默认的行为，但是必须有一个 onclick 事件句柄以便使用。
+
+在 HTML 文档中 <input type="button"> 标签每出现一次，一个 Button 对象 就会被创建。
+
+您可以通过遍历表单的 elements[] 数组来访问某个按钮，或者通过使用 document.getElementById()。
+
+Button 对象的属性
+属性	描述
+accessKey	设置或返回访问按钮的快捷键。
+alt	设置或返回当浏览器无法显示按钮时供显示的替代文本。
+disabled	设置或返回是否禁用按钮。
+form	返回对包含该按钮的表单对象的引用。
+id	设置或返回按钮的 id。
+name	设置或返回按钮的名称。
+tabIndex	设置或返回按钮的 tab 键控制次序。
+type	返回按钮的表单元素类型。
+value	设置或返回在按钮上显示的文本。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Button 对象的方法
+方法	描述
+blur()	把焦点从元素上移开。
+click()	在某个按钮上模拟一次鼠标单击。
+focus()	为某个按钮赋予焦点。
+
+
+
+HTML DOM Checkbox 对象
+Checkbox 对象
+Checkbox 对象代表一个 HTML 表单中的 一个选择框。
+
+在 HTML 文档中 <input type="checkbox"> 每出现一次，Checkbox 对象就会被创建。
+
+您可以通过遍历表单的 elements[] 数组来访问某个选择框，或者通过使用 document.getElementById() 。
+
+Checkbox 对象的属性
+属性	描述
+accessKey	设置或返回访问 checkbox 的快捷键。
+alt	设置或返回不支持 checkbox 时显示的替代文本。
+checked	设置或返回 checkbox 是否应被选中。
+defaultChecked	返回 checked 属性的默认值。
+disabled	设置或返回 checkbox 是否应被禁用。
+form	返回对包含 checkbox 的表单的引用。
+id	设置或返回 checkbox 的 id。
+name	设置或返回 checkbox 的名称。
+tabIndex	设置或返回 checkbox 的 tab 键控制次序。
+type	返回 checkbox 的表单元素类型。
+value	设置或返回 checkbox 的 value 属性的值
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Checkbox 对象的方法
+方法	描述
+blur()	从 checkbox 上移开焦点。
+click()	模拟在 checkbox 中的一次鼠标点击。
+focus()	为 checkbox 赋予焦点。
+
+
+
+HTML DOM Color 对象
+Color 对象
+Color 对象是 HTML5 中的新对象。
+Color 对象表示 HTML <input type="color"> 元素。
+注释：Internet Explorer 和 Safari 不支持 <input type="color"> 元素。
+
+访问 Color 对象
+您可以通过使用 getElementById() 来访问 <color> 元素：
+var x = document.getElementById("myColor");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问颜色选择器</h3>
+选择您喜爱的颜色：<input type="color" id="myColor">
+<p>请点击按钮来获得颜色选择器的颜色。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.getElementById("myColor").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Color 对象。
+
+创建 Color 对象
+您可以通过使用 document.createElement() 方法来创建 <color> 元素：
+
+var x = document.createElement("INPUT");
+x.setAttribute("type", "color");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建颜色选择器</h3>
+<p>点击按钮来创建颜色选择器。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "color");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Color 对象属性
+属性	描述
+span	设置或返回列的 span 属性的值。
+autocomplete	设置或返回色彩选择器的 autocomplete 属性值。
+autofocus	设置或返回色彩选择器在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回色彩选择器的默认值。
+disabled	设置或返回色彩选择器是否被禁用。
+form	返回对包含色彩选择器的表单的引用。
+list	返回对包含色彩选择器的 datalist 的引用。
+name	设置或返回色彩选择器的 name 属性值。
+type	返回色彩选择器的表单元素类型。
+value	设置或返回色彩选择器的 value 属性值。
+
+HTML DOM Input Date 对象
+Input Date 对象
+Input Date 对象是 HTML5 中的新对象。
+Input Date 对象表示 HTML <input type="datetime"> 元素。
+注释：Internet Explorer 或 Firefox 不支持 <input type="date"> 元素。
+
+访问 Input Date 对象
+您可以通过使用 getElementById() 来访问 <input type="date"> 元素：
+var x = document.getElementById("myDate");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Date 字段</h3>
+<input type="date" id="myDate" value="2014-06-01">
+<p>点击按钮来获得 date 字段的日期。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDate").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Input Date 对象。
+
+创建 Input Date 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="date"> 元素：
+
+var x = document.createElement("INPUT");
+x.setAttribute("type", "date");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Date 字段</h3>
+<p>点击按钮来创建 Date 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "date");
+    x.setAttribute("value", "2014-06-01");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input Date 对象属性
+属性	描述
+autocomplete	设置或返回 date 字段的 autocomplete 属性值。
+autofocus	设置或返回 date 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 date 字段的默认值。
+disabled	设置或返回 date 字段是否被禁用。
+form	返回对包含 date 字段的表单的引用。
+list	返回对包含 date 字段的 datalist 的引用。
+max	设置或返回 date 字段的 max 属性值。
+min	设置或返回 date 字段的 min 属性值。
+name	设置或返回 date 字段的 name 属性值。
+readOnly	设置或返回 date 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 date 字段。
+step	设置或返回 date 字段的 step 属性值。
+type	返回 date 字段的表单元素类型。
+value	设置或返回 date 字段的 value 属性值。
+
+
+
+HTML DOM Datetime 对象
+Datetime 对象
+Datetime 对象是 HTML5 中的新对象。
+Datetime 对象表示 HTML <input type="datetime"> 元素。
+注释：Internet Explorer、Firefox 或者 Chrome 不支持 <input type="datetime"> 元素，Safari 中部分支持。Opera 12 以及更早的版本中完全支持。
+
+访问 Datetime 对象
+您可以通过使用 getElementById() 来访问 <input type="myDatetime"> 元素：
+var x = document.getElementById("myDatetime");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Datetime 字段</h3>
+<input type="datetime" id="myDatetime" value="2014-06-01T10:55Z">
+<p>点击按钮来获得 datetime 字段的日期和时间。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDatetime").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Datetime 对象。
+
+创建 Datetime 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="datetime"> 元素：
+
+var x = document.createElement("INPUT");
+x.setAttribute("type", "datetime");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Datetime 字段</h3>
+<p>点击按钮来创建 Datetime 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "datetime");
+    x.setAttribute("value", "2014-06-01T10:55Z");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Datetime 对象属性
+属性	描述
+autocomplete	设置或返回 datetime 字段的 autocomplete 属性值。
+autofocus	设置或返回 datetime 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 datetime 字段的默认值。
+disabled	设置或返回 datetime 字段是否被禁用。
+form	返回对包含 datetime 字段的表单的引用。
+list	返回对包含 datetime 字段的 datalist 的引用。
+max	设置或返回 datetime 字段的 max 属性值。
+min	设置或返回 datetime 字段的 min 属性值。
+name	设置或返回 datetime 字段的 name 属性值。
+readOnly	设置或返回 datetime 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 datetime 字段。
+step	设置或返回 datetime 字段的 step 属性值。
+type	返回 datetime 字段的表单元素类型。
+value	设置或返回 datetime 字段的 value 属性值。
+标准属性和事件
+
+
+
+HTML DOM Datetime Local 对象
+Datetime Local 对象
+Datetime Local 对象是 HTML5 中的新对象。
+Datetime Local 对象表示 HTML <colgroup> 元素。
+注释：Internet Explorer 或 Firefox 不支持 <input type="datetime-local"> 元素。
+
+访问 Datetime Local 对象
+您可以通过使用 getElementById() 来访问 <datetime-local> 元素：
+var x = document.getElementById("myLocalDate");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Local Datetime 字段</h3>
+<input type="datetime-local" id="myLocalDate" value="2014-06-01T10:55:33">
+<p>点击按钮来获得 datetime 字段的本地日期和时间。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myLocalDate").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+提示：您也可以通过遍历表单的 elements 集合来访问 Input Date 对象。
+创建 Datetime Local 对象
+您可以通过使用 document.createElement() 方法来创建 <datetime-local> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "datetime-local");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Local Datetime 字段</h3>
+<p>点击按钮来创建 Local Datetime 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "datetime-local");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Datetime Local 对象属性
+属性	描述
+autocomplete	设置或返回本地时间字段的 autocomplete 属性值。
+autofocus	设置或返回本地时间字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回本地时间字段的默认值。
+disabled	设置或返回本地时间字段是否被禁用。
+form	返回对包含本地时间字段的表单的引用。
+list	返回对包含本地时间字段的 datalist 的引用。
+max	设置或返回本地时间字段的 max 属性值。
+min	设置或返回本地时间字段的 min 属性值。
+name	设置或返回本地时间字段的 name 属性值。
+readOnly	设置或返回本地时间字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写本地时间字段。
+step	设置或返回本地时间字段的 step 属性值。
+type	返回本地时间字段的表单元素类型。
+value	设置或返回本地时间字段的 value 属性值。
+标准属性和事件
+
+
+
+HTML DOM Email 对象
+Email 对象
+Email 对象是 HTML5 中的新对象。
+Email 对象表示 HTML <email> 元素。
+注释：Internet Explorer 9（以及更早的版本）或 Safari 不支持 <input type="email"> 元素。
+
+访问 Email 对象
+您可以通过使用 getElementById() 来访问 <email> 元素：
+var x = document.getElementById("myEmail");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Email 字段</h3>
+E-mail: <input type="email" id="myEmail" value="w3c@example.com">
+<p>点击按钮来获得 email 字段的电子邮件地址。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myEmail").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Email 对象
+您可以通过使用 document.createElement() 方法来创建 <email> 元素：
+
+var x = document.createElement("INPUT");
+x.setAttribute("type", "email");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Email 字段</h3>
+<p>点击按钮来创建 Email 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "email");
+    x.setAttribute("value", "w3c@example.com");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Email 对象属性
+属性	描述
+autocomplete	设置或返回 email 字段的 autocomplete 属性值。
+autofocus	设置或返回 email 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 email 字段的默认值。
+disabled	设置或返回 email 字段是否被禁用。
+form	返回对包含 email 字段的表单的引用。
+list	返回对包含 email 字段的 datalist 的引用。
+max	设置或返回 email 字段的 max 属性值。
+min	设置或返回 email 字段的 min 属性值。
+name	设置或返回 email 字段的 name 属性值。
+pattern	设置或返回 email 字段的 pattern 属性值。
+placeholder	设置或返回 email 字段的 placeholder 属性值。
+readOnly	设置或返回 email 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 email 字段。
+size	设置或返回 email 字段的 size 属性值。
+step	设置或返回 email 字段的 step 属性值。
+type	返回 email 字段的表单元素类型。
+value	设置或返回 email 字段的 value 属性值。
+
+
+
+HTML DOM FileUpload 对象
+FileUpload 对象
+在 HTML 文档中 <input type="file"> 标签每出现一次，一个 FileUpload 对象就会被创建。
+
+该元素包含一个文本输入字段，用来输入文件名，还有一个按钮，用来打开文件选择对话框以便图形化选择文件。
+
+该元素的 value 属性保存了用户指定的文件的名称，但是当包含一个 file-upload 元素的表单被提交的时候，浏览器会向服务器发送选中的文件的内容而不仅仅是发送文件名。
+
+为安全起见，file-upload 元素不允许 HTML 作者或 JavaScript 程序员指定一个默认的文件名。HTML value 属性被忽略，并且对于此类元素来说，value 属性是只读的，这意味着只有用户可以输入一个文件名。当用户选择或编辑一个文件名，file-upload 元素触发 onchange 事件句柄。
+
+您可以通过遍历表单的 elements[] 数组，或者通过使用 document.getElementById()来访问 FileUpload 对象。
+
+FileUpload 对象的属性
+属性	描述
+accept	设置或返回指示文件传输的 MIME 类型的列表（逗号分隔）。
+accessKey	设置或返回访问 FileUpload 对象的快捷键。
+alt	设置或返回不支持 <input type="file"> 时显示的替代文字。
+defaultValue	设置或返回 FileUpload 对象的初始值。
+disabled	设置或返回是否禁用 FileUpload 对象。
+form	返回对包含 FileUpload 对象的表单的引用。
+id	设置或返回 FileUpload 对象的 id。
+name	设置或返回 FileUpload 对象的名称。
+tabIndex	设置或返回定义 FileUpload 对象的 tab 键控制次序的索引号。
+type	返回表单元素的类型。对于 FileUpload ，则是 "file" 。
+value	返回由用户输入设置的文本后，FileUpload 对象的文件名。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+FileUpload 对象的方法
+方法	描述
+blur()	从 FileUpload 对象上移开焦点。
+focus()	为 FileUpload 对象赋予焦点。
+select()	选取 FileUpload 对象。
