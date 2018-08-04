@@ -449,3 +449,302 @@ ColumnGroup 对象支持标准属性和事件。
 
 
 HTML DOM Datalist 对象
+
+Datalist 对象是 HTML5 中的新对象。
+Datalist 对象表示 HTML <datalist> 元素。
+访问 Datalist 对象
+您可以通过使用 getElementById() 来访问 <datalist> 元素：
+var x = document.getElementById("myDatalist");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Datalist 元素</h3>
+<form>
+<input list="myDatalist"> 
+<datalist id="myDatalist"> 
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+</form>
+<p>请点击按钮来获得 datalist 中 option 元素的数目。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<p><b>注释：</b>Internet Explorer 9 以及更早的版本不支持 datalist 元素。</p>
+<p><b>注释：</b>input 元素的 list 属性用于绑定 datalist 元素。</p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDatalist").options.length;
+    document.getElementById("demo").innerHTML = "Found " + x + " options in the list.";
+}
+</script>
+</body>
+</html>
+
+创建 Datalist 对象
+您可以通过使用 document.createElement() 方法来创建 <datalist> 元素：
+var x = document.createElement("DATALIST");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Datalist 元素</h3>
+<p>请点击按钮来创建 INPUT 字段、DATALIST 元素以及 OPTION 元素。</p>
+<form id="myForm"></form>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>Internet Explorer 9 以及更早的版本不支持 datalist 元素。</p>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("list", "browsers");
+    document.getElementById("myForm").appendChild(x);
+
+    var y = document.createElement("DATALIST");
+    y.setAttribute("id", "browsers");
+    document.getElementById("myForm").appendChild(y);
+
+    var z = document.createElement("OPTION");
+    z.setAttribute("value", "Chrome");
+    document.getElementById("browsers").appendChild(z);
+}
+</script>
+</body>
+</html>
+
+Datalist 对象属性
+属性	描述
+options	返回 datalist 中所有选项的集合。
+
+
+
+HTML DOM Del 对象
+Del 对象
+Del 对象表示 HTML <del> 元素。
+
+访问 Del 对象
+您可以通过使用 getElementById() 来访问 <del> 元素：
+var x = document.getElementById("myDel");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 DEL 元素</h3>
+<p><del id="myDel" cite="why_deleted.htm">这段文本已被删除。</del></p>
+<p>点击按钮来获得页面的 URL，此页面解释了文本被删除的原因。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myDel").cite;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Del 对象
+您可以通过使用 document.createElement() 方法来创建 <del> 元素：
+var x = document.createElement("DEL");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 DEL 元素</h3>
+<p>点击按钮来创建 DEL 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("DEL");
+var t = document.createTextNode("Some deleted text");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Del 对象属性
+属性	描述
+cite	设置或者返回被删除文本的 cite 属性值。
+dateTime	设置或者返回被删除文本的 datetime 属性值。
+
+
+
+HTML DOM Details 对象
+
+Details 对象表示 HTML <details> 元素。
+
+访问 Details 对象
+您可以通过使用 getElementById() 来访问 <details> 元素：
+var x = document.getElementById("myDetails");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 DETAILS 元素</h3>
+<details id="myDetails">
+Some additional details...
+</details>
+<p>点击按钮来显示额外的细节。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myDetails");
+x.open=true;
+}
+</script>
+</body>
+</html>
+
+创建 Details 对象
+您可以通过使用 document.createElement() 方法来创建 <details> 元素：
+var x = document.createElement("DETAILS");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 DETAILS 元素</h3>
+<p>点击按钮来创建 DETAILS 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("DETAILS");
+var t = document.createTextNode("Some additional details...");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Details 对象属性
+属性	描述
+open	设置或者返回 details 对于用户是否是可见的。
+
+
+
+HTML DOM Dialog 对象
+
+Dialog 对象是 HTML5 中的新对象。
+Dialog 对象表示 HTML <dialog> 元素。
+注释：目前只有 Chrome Canary 和 Safari 6 支持 <dialog> 元素。
+
+访问 Dialog 对象
+您可以通过使用 getElementById() 来访问 <dialog> 元素：
+var x = document.getElementById("myDialog");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Dialog 元素</h3>
+<p>点击按钮来打开对话窗口。</p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>目前只有 Chrome Canary 和 Safari 6 支持 <dialog> 元素。</p>
+<dialog id="myDialog">This is an open dialog window</dialog>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myDialog");
+x.open = true;
+}
+</script>
+</body>
+</html>
+
+创建 Dialog 对象
+您可以通过使用 document.createElement() 方法来创建 <dialog> 元素：
+var x = document.createElement("DIALOG");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Dialog 元素</h3>
+<p>点击按钮来创建含有文本的 DIALOG 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>目前只有 Chrome Canary 和 Safari 6 支持 <dialog> 元素。</p>
+<script>
+function myFunction()
+{
+var x = document.createElement("DIALOG");
+var t = document.createTextNode("This is an open dialog window");
+x.setAttribute("open", "open");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Dialog 对象属性
+属性	描述
+open	设置或返回对话是否是打开的。
+returnValue	设置或返回对话的返回值。
+Dialog 对象方法
+方法	描述
+close()	关闭对话。
+show()	显示对话。
+showModal()	显示对话，并使其成为 top-most 型对话。
+
+
+
+HTML DOM Embed 对象
+
+Embed 对象
+Embed 对象是 HTML5 中的新对象。
+Embed 对象表示 HTML <embed> 元素。
+访问 Embed 对象
+您可以通过使用 getElementById() 来访问 <embed> 元素：
+var x = document.getElementById("myEmbed");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Embed 元素</h3>
+<embed id="myEmbed" src="/i/helloworld.swf">
+<p>点击按钮来获得内嵌 flash 文件的 URL。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myEmbed").src;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Embed 对象
+您可以通过使用 document.createElement() 方法来创建 <embed> 元素：
+var x = document.createElement("EMBED");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Embed 元素</h3>
+<p>点击按钮来创建含有内嵌 flash 动画的 EMBED 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("EMBED");
+x.setAttribute("src", "/i/helloworld.swf");
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Embed 对象属性
+属性	描述
+height	设置或返回 embed 元素中 height 属性的值。
+src	设置或返回 embed 元素中 src 属性的值。
+type	设置或返回 embed 元素中 type 属性的值。
+width	设置或返回 embed 元素中 width 属性的值。
