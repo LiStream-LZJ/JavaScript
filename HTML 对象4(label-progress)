@@ -1,0 +1,726 @@
+HTML DOM Label 对象
+Label 对象
+Label 对象表示 HTML <label> 元素。
+
+访问 Label 对象
+您可以通过使用 getElementById() 来访问 <label> 元素：
+var x = document.getElementById("myLabel");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 LABEL 元素</h3>
+<label id="myLabel" for="male">Male</label>
+<input type="radio" name="sex" id="male" value="male"><br>
+<p>点击按钮来获得 label 所绑定元素的 id。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myLabel").htmlFor;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Label 对象
+您可以通过使用 document.createElement() 方法来创建 <label> 元素：
+var x = document.createElement("LABEL");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 LABEL 元素</h3>
+<form id="myForm" action="form_action.asp">
+  <input type="radio" name="sex" id="male" value="male">
+</form>
+<p>点击按钮来创建 LABEL 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("LABEL");
+var t = document.createTextNode("Male");
+x.setAttribute("for", "male");
+x.appendChild(t);
+document.getElementById("myForm").insertBefore(x,document.getElementById("male"));
+}
+</script>
+</body>
+</html>
+
+Label 对象属性
+属性	描述
+control	返回被标记的控件。
+form	返回对包含 label 的表单的引用。
+htmlFor	设置或返回 label 的 for 属性值。
+标准属性和事件
+Label 对象支持标准属性和事件。
+
+
+
+HTML DOM Legend 对象
+Legend 对象
+Legend 对象表示 HTML <legend> 元素。
+
+访问 Legend 对象
+您可以通过使用 getElementById() 来访问 <legend> 元素：
+var x = document.getElementById("myLegend");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 LEGEND 元素</h3>
+<fieldset>
+  <legend id="myLegend">Personalia:</legend>
+  Name: <input type="text">
+</fieldset>
+<p>点击按钮来获得 legend 元素的文本。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myLegend").textContent;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+<p><b>注释：</b>Internet Explorer 8 以及更早的版本不支持 textContent 属性。</p>
+</body>
+</html>
+
+创建 Legend 对象
+您可以通过使用 document.createElement() 方法来创建 <legend> 元素：
+var x = document.createElement("LEGEND");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 LEGEND 元素</h3>
+<p>点击按钮来创建含有文本的 LEGEND 元素。</p>
+<fieldset id="myFieldset">
+  Name: <input type="text">
+</fieldset><br>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("LEGEND");
+var t = document.createTextNode("Personalia:");
+x.appendChild(t);
+document.getElementById("myFieldset").appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Legend 对象属性
+属性	描述
+form	返回对包含 legend 的表单的引用。
+
+
+
+HTML DOM Li 对象
+Li 对象
+Li 对象表示 HTML <li> 元素。
+
+访问 Li 对象
+您可以通过使用 getElementById() 来访问 <li> 元素：
+var x = document.getElementById("myLi");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 LI 元素</h3>
+<ol>
+  <li id="myLi">咖啡</li>
+  <li>红茶</li>
+  <li>牛奶</li>
+  <li>橙汁</li>
+</ol>
+<p>点击按钮来设置列表项从数字 300 开始递增。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myLi");
+x.value = "300";
+}
+</script>
+</body>
+</html>
+
+创建 Li 对象
+您可以通过使用 document.createElement() 方法来创建 <li> 元素：
+var x = document.createElement("LI");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 LI 元素</h3>
+<ol id="myList">
+  <li>咖啡</li>
+  <li>红茶</li>
+  <li>牛奶</li>
+  <li>橙汁</li>
+</ol>
+<p>点击按钮来创建 LI 元素。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("LI");
+var t = document.createTextNode("豆浆");
+x.appendChild(t);
+document.getElementById("myList").appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Li 对象属性
+属性	描述
+value	设置或返回列表项的 value 属性值。
+
+
+
+HTML DOM Link 对象
+Link 对象
+Link 对象代表某个 HTML 的 <link> 元素。<link> 元素可定义两个链接文档之间的关系。
+
+<link> 元素被定义于 HTML 文档的 head 部分。
+
+Link 对象属性
+属性	描述
+charset	设置或返回目标 URL 的字符编码。
+disabled	设置或返回目标 URL 是否当被禁用。
+href	设置或返回被链接资源的 URL。
+hreflang	设置或返回目标 URL 的基准语言。
+id	设置或返回某个 <link> 元素的 id。
+media	设置或返回文档显示的设备类型。
+name	设置或返回 <link> 元素的名称。
+rel	设置或返回当前文档与目标 URL之间的关系。
+rev	设置或返回目标 URL 与当前文档之间的关系。
+type	设置或返回目标 URL 的 MIME 类型。
+标准属性
+属性	描述
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+
+
+
+HTML DOM Map 对象
+Map 对象
+Map 对象表示 HTML <map> 元素。
+
+访问 Map 对象
+您可以通过使用 getElementById() 来访问 <map> 元素：
+var x = document.getElementById("myMap");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 MAP 元素</h3>
+<img src="/i/eg_planets.jpg" border="0" usemap="#myMap" alt="Planets" />
+<map name="myMap" id="myMap">
+<area
+shape="circle"
+coords="180,139,14"
+href ="/example/html/venus.html"
+target ="_blank"
+alt="Venus" />
+<area
+shape="circle"
+coords="129,161,10"
+href ="/example/html/mercur.html"
+target ="_blank"
+alt="Mercury" />
+<area
+shape="rect"
+coords="0,0,110,260"
+href ="/example/html/sun.html"
+target ="_blank"
+alt="Sun" />
+</map>
+<p>点击按钮来获得图像映射中 area 元素的数目。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myMap").areas.length;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Map 对象
+您可以通过使用 document.createElement() 方法来创建 <map> 元素：
+var x = document.createElement("MAP");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 MAP 元素</h3>
+<img src="/i/eg_planets.jpg" border="0" usemap="#myMap" alt="Planets" />
+<p>点击按钮来创建 IMAGE-MAP 以及链接到 "venus.htm" 的 AREA 元素：</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("MAP");
+x.setAttribute("id", "myMap");
+x.setAttribute("name", "myMap");
+document.body.appendChild(x);
+var y = document.createElement("AREA");
+y.setAttribute("href", "/example/html/venus.html");
+y.setAttribute("shape", "circle");
+y.setAttribute("coords", "180,139,14");
+document.getElementById("myMap").appendChild(y);
+document.getElementById("demo").innerHTML = "已创建 MAP，现在您可以在图像中点击 venus 区域。";
+}
+</script>
+</body>
+</html>
+
+Map 对象集合
+集合	描述
+areas	返回 image-map 中所有 <area> 元素的集合。
+images	返回与 image-map 相关联的所有 <img> 和 <object> 元素的集合。
+Map 对象属性
+属性	描述
+name	设置或返回 image-map 的 name 属性值。
+
+
+
+HTML DOM Menu 对象
+Menu 对象
+Menu 对象表示 HTML <menu> 元素。
+
+注释：任何主流浏览器都不支持 <menu> 元素。
+
+访问 Menu 对象
+您可以通过使用 getElementById() 来访问 <menu> 元素：
+
+var x = document.getElementById("myEmbed");
+创建 Menu 对象
+您可以通过使用 document.createElement() 方法来创建 <menu> 元素：
+
+var x = document.createElement("EMBED");
+Menu 对象属性
+属性	描述
+label	设置或返回菜单的 label 属性的值。
+type	设置或返回菜单的 type 属性的值。
+
+
+
+HTML DOM MenuItem 对象
+MenuItem 对象
+MenuItem 对象表示 HTML <menuitem> 元素。
+
+注释：只有 Firefox 支持 <menuitem> 元素。
+
+访问 MenuItem 对象
+您可以通过使用 getElementById() 来访问 <menuitem> 元素：
+
+var x = document.getElementById("myMenuItem");
+创建 MenuItem 对象
+您可以通过使用 document.createElement() 方法来创建 <menuitem> 元素：
+
+var x = document.createElement("MENUITEM");
+MenuItem 对象属性
+属性	描述
+checked	设置或返回是否选中菜单项。
+command	设置或返回菜单项的 command 属性值。
+default	设置或返回菜单项是否是默认命令。
+disabled	设置或返回是否禁用菜单项。
+icon	设置或返回表示菜单项的图像。
+label	设置或返回菜单项的 label 属性值。
+radiogroup	设置或返回菜单项的 radiogroup 属性值。
+type	设置或返回菜单项的 type 属性值。
+
+
+
+HTML DOM Meta 对象
+Meta 对象
+Meta 对象代表 HTML 的 一个 <meta> 元素。
+
+<meta> 元素可提供有关某个 HTML 元素的元信息 (meta-information)，比如描述、针对搜索引擎的关键词以及刷新频率。
+
+Meta 对象属性
+属性	描述
+content	设置或返回 <meta> 元素的 content 属性的值。
+httpEquiv	把 content 属性连接到一个 HTTP 头部。
+name	把 content 属性连接到某个名称。
+scheme	设置或返回用于解释 content 属性的值的格式。
+
+
+
+HTML DOM Meter 对象
+Meter 对象
+Meter 对象是 HTML5 中的新对象。
+
+Meter 对象表示 HTML <meter> 元素。
+
+访问 Meter 对象
+您可以通过使用 getElementById() 来访问 <meter> 元素：
+var x = document.getElementById("myMeter");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 METER 元素</h3>
+<p>小明的分数：<meter id="myMeter" min="0" low="40" high="95" max="100" value="65"></meter></p>
+<p>点击按钮来获得以上度量的当前“被测量”值。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>Internet Explorer 以及 Safari 5（以及更早的版本）不支持 value 属性。</p>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myMeter").value;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Meter 对象
+您可以通过使用 document.createElement() 方法来创建 <meter> 元素：
+var x = document.createElement("METER");
+
+Meter 对象属性
+属性	描述
+high	设置或返回 gauge 中 high 属性的值。
+labels	返回属于 gauge 标记的 <label> 元素列表。
+low	设置或返回 gauge 中 low 属性的值。
+max	设置或返回 gauge 中 max 属性的值。
+min	设置或返回 gauge 中 min 属性的值。
+optimum	设置或返回 gauge 中 optimum 属性的值。
+value	设置或返回 gauge 中 value 属性的值。
+
+
+
+HTML DOM Object 对象
+Object 对象
+Object 对象代表 HTML 的 <object> 元素。
+
+<object> 元素用于在网页中包含对象，比如：图像、音频、视频、Java applet、ActiveX、PDF、Flash 等。
+
+Object 对象属性
+属性	描述
+align	设置或返回对象相对于周围文本的对齐方式。
+archive	设置或返回一个字符串，用于实现对象的存档功能。
+border	设置或返回围绕对象的边框。
+code	设置或返回文件的 URL，该文件包含已编译的 Java 类。
+codeBase	设置或返回组件的 URL。
+codeType	 
+data	 
+declare	 
+form	返回对对象的父表单的引用。
+height	设置或返回对象的高度。
+hspace	设置或返回对象的水平外边距。
+name	设置或返回对象的名称。
+standby	设置或返回在加载对象时返回的消息。
+type	设置或返回通过 data 属性下载的数据的内容类型。
+useMap	 
+vspace	设置或返回对象的垂直外边距。
+width	设置或返回对象的宽度。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Ol 对象
+Ol 对象
+Ol 对象表示 HTML <ol> 元素。
+
+访问 Ol 对象
+您可以通过使用 getElementById() 来访问 <ol> 元素：
+var x = document.getElementById("myOl");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 OL 元素</h3>
+<ol id="myOl">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<p>点击按钮来设置列表项的数字从 25 开始递增。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myOl");
+x.start = "25";
+}
+</script>
+</body>
+</html>
+
+创建 Ol 对象
+您可以通过使用 document.createElement() 方法来创建 <ol> 元素：
+var x = document.createElement("OL");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 OL 元素</h3>
+<p>点击按钮来创建 OL 元素和 LI 元素。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("OL");
+x.setAttribute("id", "myOl");
+document.body.appendChild(x);
+var y = document.createElement("LI");
+var t = document.createTextNode("咖啡");
+y.appendChild(t);
+document.getElementById("myOl").appendChild(y);
+}
+</script>
+</body>
+</html>
+
+
+
+Ol 对象属性
+属性	描述
+compact	
+HTML5 中不支持。请使用 style.lineHeight 代替。
+设置或返回列表是否应该比正常值显示得略小。
+reversed	设置或返回列表顺序是否为降序。
+start	设置或返回有序列表的 start 属性值。
+type	设置或返回有序列表的 type 属性值。
+
+HTML DOM OptionGroup 对象
+OptionGroup 对象
+OptionGroup 对象表示 HTML <optgroup> 元素。
+
+访问 OptionGroup 对象
+您可以通过使用 getElementById() 来访问 <optgroup> 元素：
+var x = document.getElementById("myOptgroup");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 OPTGROUP 元素</h3>
+<select size="4">
+  <optgroup id="myOptgroup" label="德国车">
+    <option value="volvo">奔驰</option>
+    <option value="saab">宝马</option>
+    <option value="koenigsegg">奥迪</option>
+  </optgroup>
+</select>
+<p>点击按钮来获得选项组的标签/描述。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myOptgroup").label;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 OptionGroup 对象
+您可以通过使用 document.createElement() 方法来创建 <optgroup> 元素：
+var x = document.createElement("OPTGROUP");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 OPTGROUP 元素</h3>
+<p>点击按钮来创建 OPTGROUP 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<select id="mySelect" size="6">
+<option>BMW
+<option>Mercedes
+<option>Ford
+<option>Volvo
+<option>Toyota
+</select>
+<script>
+function myFunction()
+{
+var x = document.getElementById("mySelect");
+var y = document.createElement("OPTGROUP");
+y.setAttribute("label", "SwedishCars");
+y.appendChild(x.options[3])
+x.insertBefore(y,x.options[3]);
+}
+</script>
+</body>
+</html>
+
+OptionGroup 对象属性
+属性	描述
+disabled	设置或返回是否禁用选项组。
+label	设置或返回选项组的 label 属性值。
+
+
+
+HTML DOM Option 对象
+Option 对象
+Option 对象代表 HTML 表单中下拉列表中的一个选项。
+
+在 HTML 表单中 <option> 标签每出现一次，一个 Option 对象就会被创建。
+
+您可通过表单的 elements[] 数组访问一个 Option 对象，或者通过使用 document.getElementById()。
+
+Option 对象的属性
+属性	描述
+defaultSelected	返回 selected 属性的默认值。
+disabled	设置或返回选项是否应被禁用。
+form	返回对包含该元素的 <form> 元素的引用。
+id	设置或返回选项的 id。
+index	返回下拉列表中某个选项的索引位置。
+label	设置或返回选项的标记 （仅用于选项组）。
+selected	设置或返回 selected 属性的值。
+text	设置或返回某个选项的纯文本值。
+value	设置或返回被送往服务器的值。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Parameter 对象
+Parameter 对象
+Parameter 对象表示 HTML <param> 元素。
+
+访问 Parameter 对象
+您可以通过使用 getElementById() 来访问 <param> 元素：
+var x = document.getElementById("myParam");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 PARAM 元素</h3>
+<object data="/i/horse.mp3">
+  <param id="myParam" name="autoplay" value="true">
+</object>
+<p>点击按钮来获得参数的名称。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myParam").name;
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+</body>
+</html>
+
+创建 Parameter 对象
+您可以通过使用 document.createElement() 方法来创建 <param> 元素：
+var x = document.createElement("PARAM");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 PARAM 元素</h3>
+<p>点击按钮来创建包含内嵌音频文件的 OBJECT 和 PARAM 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("OBJECT");
+x.setAttribute("data", "/i/horse.mp3");
+x.setAttribute("id", "myObject");
+document.body.appendChild(x);
+var y = document.createElement("PARAM");
+y.setAttribute("name", "autoplay");
+y.setAttribute("value", "true");
+document.getElementById("myObject").appendChild(y);
+}
+</script>
+</body>
+</html>
+
+Parameter 对象属性
+属性	描述
+name	设置或返回参数的 name 属性值。
+value	设置或返回参数的 value 属性值。
+
+
+
+HTML DOM Progress 对象
+Progress 对象
+Progress 对象是 HTML5 中的新对象。
+
+Progress 对象表示 HTML <progress> 元素。
+
+<progress> 元素表示任务的进度。
+
+访问 Progress 对象
+您可以通过使用 getElementById() 来访问 <progress> 元素：
+var x = document.getElementById("myProgress");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 PROGRESS 元素</h3>
+下载进度：
+<progress id="myProgress" value="75" max="100">
+</progress>
+<p>点击按钮来获得下载进度条的当前进度值。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myProgress").value;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Progress 对象
+您可以通过使用 document.createElement() 方法来创建 <progress> 元素：
+var x = document.createElement("PROGRESS");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 PROGRESS 元素</h3>
+<p>点击按钮来创建最大值为 100 而当前值为 22 的 PROGRESS 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("PROGRESS");
+x.setAttribute("value", "22");
+x.setAttribute("max", "100");
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Progress 对象属性
+属性	描述
+labels	返回进度条的标记列表（如有）。
+max	设置或返回进度条的 max 属性值。
+position	返回进度条的当前位置。
+value	设置或返回进度条的 value 属性值。
