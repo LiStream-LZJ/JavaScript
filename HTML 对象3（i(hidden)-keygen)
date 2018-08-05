@@ -1,0 +1,770 @@
+HTML DOM Hidden 对象
+Hidden 对象
+Hidden 对象代表一个 HTML 表单中的某个隐藏输入域。
+这种类型的输入元素实际上是隐藏的。这个不可见的表单元素的 value 属性保存了一个要提交给 Web 服务器的任意字符串。如果想要提交并非用户直接输入的数据的话，就是用这种类型的元素。
+在 HTML 表单中 <input type="hidden"> 标签每出现一次，一个 Hidden 对象就会被创建。
+您可通过遍历表单的 elements[] 数组来访问某个隐藏输入域，或者通过使用document.getElementById()。
+
+Hidden 对象的属性
+属性	描述
+alt	设置或返回当不支持隐藏输入域时显示的替代文本。
+form	返回一个对包含隐藏域的表单的引用。
+id	设置或返回隐藏域的 id。
+name	设置或返回隐藏域的名称。
+type	返回隐藏输入域的表单类型。
+value	设置或返回隐藏域的 value 属性的值。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM Input Image 对象
+Input Image 对象
+Input Image 对象是 HTML5 中的新对象。
+
+Input Image 对象表示 HTML <image> 元素。
+
+访问 Input Image 对象
+您可以通过使用 getElementById() 来访问 <image> 元素：
+
+var x = document.getElementById("myImage");
+提示：您也可以通过遍历表单的 elements 集合来访问 Input Image 对象。
+
+创建 Input Image 对象
+您可以通过使用 document.createElement() 方法来创建 <image> 元素：
+
+var x = document.createElement("INPUT");
+x.setAttribute("type", "image");
+Input Image 对象属性
+属性	描述
+autocomplete	设置或返回 email 字段的 autocomplete 属性值。
+alt	设置或返回 input image 的 alt 属性值。
+autofocus	设置或返回 input image 在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 input image 的默认值。
+disabled	设置或返回 input image 是否被禁用。
+form	返回对包含 input image 的表单的引用。
+formAction	设置或返回 input image 的 formaction 属性值。
+formEnctype	设置或返回 input image 的 formenctype 属性值。
+formMethod	设置或返回 input image 的 formmethod 属性值。
+formNoValidate	设置或返回在提交表单时是否应该验证表单数据（form-data）。
+formTarget	设置或返回 input image 的 formtarget 属性值。
+height	设置或返回 input image 的 height 属性值。
+name	设置或返回 input image 的 name 属性值。
+src	设置或返回 input image 的 src 属性值。
+type	返回 input image 字段的表单元素类型。
+value	设置或返回 input image 的 value 属性值。
+width	设置或返回 input image 的 width 属性值。
+
+
+
+HTML DOM Month 对象
+Month 对象
+Month 对象是 HTML5 中的新对象。
+Month 对象表示 HTML <input type="month"> 元素。
+
+注释：Internet Explorer 或 Firefox 不支持 <input type="month"> 元素。
+
+访问 Month 对象
+您可以通过使用 getElementById() 来访问 <input type="month"> 元素：
+var x = document.getElementById("myMonth");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Month 字段</h3>
+<input type="month" id="myMonth" value="2014-05">
+<p>点击按钮来获得 month 字段的月份和年份。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myMonth").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Month 对象。
+
+创建 Month 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="month"> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "month");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Month 字段</h3>
+<p>点击按钮来创建 Month 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "month");
+    x.setAttribute("value", "2014-05");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Month 对象属性
+属性	描述
+autocomplete	设置或返回 month 字段的 autocomplete 属性值。
+autofocus	设置或返回 month 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 month 字段的默认值。
+disabled	设置或返回 month 字段是否被禁用。
+form	返回对包含 month 字段的表单的引用。
+list	返回对包含 month 字段的 datalist 的引用。
+max	设置或返回 month 字段的 max 属性值。
+min	设置或返回 month 字段的 min 属性值。
+name	设置或返回 month 字段的 name 属性值。
+readOnly	设置或返回 month 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 month 字段。
+step	设置或返回 month 字段的 step 属性值。
+type	返回 month 字段的表单元素类型。
+value	设置或返回 month 字段的 value 属性值。
+
+
+
+HTML DOM Number 对象
+
+Number 对象
+Number 对象是 HTML5 中的新对象。
+Number 对象表示 HTML <input type="number"> 元素。
+注释：Internet Explorer 9 以及更早的版本不支持 <input type="number"> 元素。
+访问 Number 对象
+您可以通过使用 getElementById() 来访问 <number> 元素：
+var x = document.getElementById("myNumber");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Number 字段</h3>
+<input type="number" id="myNumber" value="2">
+<p>点击按钮来获得 number 字段的数字。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myNumber").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Number 对象。
+
+创建 Number 对象
+您可以通过使用 document.createElement() 方法来创建 <number> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "number");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Number 字段</h3>
+<p>点击按钮来创建 Number 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "number");
+    x.setAttribute("value", "12345");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Number 对象属性
+属性	描述
+autocomplete	设置或返回 number 字段的 autocomplete 属性值。
+autofocus	设置或返回 number 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 number 字段的默认值。
+disabled	设置或返回 number 字段是否被禁用。
+form	返回对包含 number 字段的表单的引用。
+list	返回对包含 number 字段的 datalist 的引用。
+max	设置或返回 number 字段的 max 属性值。
+min	设置或返回 number 字段的 min 属性值。
+name	设置或返回 number 字段的 name 属性值。
+placeholder	设置或返回 number 字段的 placeholder 属性值。
+readOnly	设置或返回 number 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 number 字段。
+step	设置或返回 number 字段的 step 属性值。
+type	返回 number 字段的表单元素类型。
+value	设置或返回 number 字段的 value 属性值。
+
+
+
+HTML DOM Password 对象
+Password 对象
+Password 对象代表 HTML 表单中的密码字段。
+
+HTML 的 <input type="password"> 标签在表单上每出现一次，一个 Password 对象就会被创建。
+
+该文本输入字段供用户输入某些敏感的数据，比如密码等。当用户输入的时候，他的输入是被掩盖的（例如使用星号*），以防止旁边的人从他背后看到输入的内容。不过需要注意的是，当表单提交时，输入是用明文发送的。
+
+与类型为 "text" 的元素类似，当用户改变显示值时，它会触发 onchange 事件句柄。
+
+您可以通过遍历表单的 elements[] array 来访问密码字段，或者通过使用 document.getElementById() 。
+
+Password 对象属性
+属性	描述
+accessKey	设置或返回访问密码字段的快捷键。
+alt	设置或返回当不支持密码字段时显示的替代文字。
+defaultValue	设置或返回密码字段的默认值。
+disabled	设置或返回是否应被禁用密码字段。
+form	返回对包含此密码字段的表单的引用。
+id	设置或返回密码字段的 id。
+maxLength	设置或返回密码字段中字符的最大数目。
+name	设置或返回密码字段的名称。
+readOnly	设置或返回密码字段是否应当是只读的。
+size	设置或返回密码字段的长度。
+tabIndex	设置或返回密码字段的 tab 键控制次序。
+type	返回密码字段的表单元素类型。
+value	设置或返回密码字段的 value 属性的值。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Password 对象方法
+属性	描述
+blur()	从密码字段移开焦点。
+focus()	为密码字段赋予焦点。
+select()	选取密码字段中的文本。
+
+
+
+HTML DOM Input Range 对象
+Input Range 对象
+Input Range 对象是 HTML5 中的新对象。
+Input Range 对象表示 HTML <input type="range"> 元素。
+注释：Internet Explorer 9 以及更早的版本不支持 <input type="range"> 元素。
+
+访问 Input Range 对象
+您可以通过使用 getElementById() 来访问 <input type="range"> 元素：
+var x = document.getElementById("myRange");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问滑块控件</h3>
+<input type="range" id="myRange">
+<p>点击按钮来获得滑块控件的值。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myRange").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Input Range 对象。
+
+创建 Input Range 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="range"> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "range");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建滑块控件</h3>
+<p>点击按钮来创建滑块控件。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "range");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input Range 对象属性
+属性	描述
+autocomplete	设置或返回滑块控件的 autocomplete 属性值。
+autofocus	设置或返回滑块控件在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回滑块控件的默认值。
+disabled	设置或返回滑块控件是否被禁用。
+form	返回对包含滑块控件的表单的引用。
+list	返回对包含滑块控件的 datalist 的引用。
+max	设置或返回滑块控件的 max 属性值。
+min	设置或返回滑块控件的 min 属性值。
+name	设置或返回滑块控件的 name 属性值。
+step	设置或返回滑块控件的 step 属性值。
+type	返回滑块控件的表单元素类型。
+value	设置或返回滑块控件的 value 属性值。
+
+
+
+HTML DOM Radio 对象
+Radio 对象
+Radio 对象代表 HTML 表单中的单选按钮。
+
+在 HTML 表单中 <input type="radio"> 每出现一次，一个 Radio 对象就会被创建。
+
+单选按钮是表示一组互斥选项按钮中的一个。当一个按钮被选中，之前选中的按钮就变为非选中的。
+
+当单选按钮被选中或不选中时，该按钮就会触发 onclick 事件句柄。
+
+您可通过遍历表单的 elements[] 数组来访问 Radio 对象，或者通过使用 document.getElementById()。
+
+Radio 对象属性
+属性	描述
+accessKey	设置或返回访问单选按钮的快捷键。
+alt	设置或返回在不支持单选按钮时显示的替代文本。
+checked	设置或返回单选按钮的状态。
+defaultChecked	返回单选按钮的默认状态。
+disabled	设置或返回是否禁用单选按钮。
+form	返回一个对包含此单选按钮的表单的引用。
+id	设置或返回单选按钮的 id。
+name	设置或返回单选按钮的名称。
+tabIndex	设置或返回单选按钮的 tab 键控制次序。
+type	返回单选按钮的表单类型。
+value	设置或返回单选按钮的 value 属性的值。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Radio 对象方法
+方法	描述
+blur()	从单选按钮移开焦点。
+click()	在单选按钮上模拟一次鼠标点击。
+focus()	为单选按钮赋予焦点。
+
+
+
+HTML DOM Input Search 对象
+Input Search 对象
+Input Search 对象是 HTML5 中的新对象。
+Input Search 对象表示 HTML <input type="search"> 元素。
+注释：Internet Explorer 9（以及更早的版本）或 Safari 不支持 <input type="search"> 元素。
+
+访问 Input Search 对象
+您可以通过使用 getElementById() 来访问 <search> 元素：
+var x = document.getElementById("mySearch");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Search 字段</h3>
+<input type="search" id="mySearch" placeholder="搜索..">
+<p>点击按钮来获得 search 字段的占位符文本。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("mySearch").placeholder;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Input Search 对象
+您可以通过使用 document.createElement() 方法来创建 <search> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "search");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Search 字段</h3>
+<p>点击按钮来创建 Search 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "search");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input Search 对象属性
+属性	描述
+autocomplete	设置或返回 Search 字段的 autocomplete 属性值。
+autofocus	设置或返回 Search 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 Search 字段的默认值。
+disabled	设置或返回 Search 字段是否被禁用。
+form	返回对包含 Search 字段的表单的引用。
+list	返回对包含 Search 字段的 datalist 的引用。
+maxLength	设置或返回 search 字段的 maxLength 属性值。
+name	设置或返回 Search 字段的 name 属性值。
+pattern	设置或返回 Search 字段的 pattern 属性值。
+placeholder	设置或返回 Search 字段的 placeholder 属性值。
+readOnly	设置或返回 Search 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 Search 字段。
+size	设置或返回 Search 字段的 size 属性值。
+step	设置或返回 Search 字段的 step 属性值。
+type	返回 Search 字段的表单元素类型。
+value	设置或返回 Search 字段的 value 属性值。
+
+
+
+HTML DOM Submit 对象
+Submit 对象
+Submit 对象代表 HTML 表单中的一个提交按钮 (submit button)。
+
+在 HTML 表单中 <input type="submit"> 标签每出现一次，一个 Submit 对象就会被创建。
+
+在表单提交之前，触发 onclick 事件句柄，并且一个句柄可以通过返回 fasle 来取消表单提交。
+
+参阅 Form.submit() 方法 和 Form.onsubmit 事件句柄。
+
+实例：表单验证
+
+您可以通过遍历表单的 elements[] 数组来访问某个提交按钮，或者通过使用document.getElementById()。
+
+Submit 对象属性
+属性	描述
+accessKey	设置或返回访问提交按钮的快捷键。
+alt	设置或返回当浏览器不支持提交按钮时供显示的替代文本。
+disabled	设置或返回提交按钮是否应被禁用。
+form	返回一个对包含此提交按钮的表单的引用。
+id	设置或返回提交按钮的 id。
+name	设置或返回提交按钮的名称。
+tabIndex	设置或返回提交按钮的 tab 键控制次序。
+type	返回提交按钮的表单元素类型。
+value	设置或返回在提交按钮上显示的文本。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Submit 对象方法
+方法	描述
+blur()	从提交按钮上移开焦点。
+click()	在提交按钮上模拟一次鼠标点击。
+focus()	为提交按钮赋予焦点。
+
+
+
+HTML DOM Text 对象
+Text 对象
+Text 对象代表 HTML 表单中的文本输入域。
+
+在 HTML 表单中 <input type="text"> 每出现一次，Text 对象就会被创建。
+
+该元素可创建一个单行的文本输入字段。当用户编辑显示的文本并随后把输入焦点转移到其他元素的时候，会触发 onchange 事件句柄。
+
+您可以使用 HTML <textarea> 标记来创建多行文本输入。参阅 Textarea 对象。
+
+对于掩码文本输入，把 <input type="text"> 中的 type 设置为 "password"。参阅 Input Password。
+
+您可以通过表单的 elements[] 数组来访问文本输入域，或者通过使用 document.getElementById()。
+
+Text 对象属性
+属性	描述
+accessKey	设置或返回访问文本域的快捷键。
+alt	设置或返回当浏览器不支持文本域时供显示的替代文本。
+defaultValue	设置或返回文本域的默认值。
+disabled	设置或返回文本域是否应被禁用。
+form	返回一个对包含文本域的表单对象的引用。
+id	设置或返回文本域的 id。
+maxLength	设置或返回文本域中的最大字符数。
+name	设置或返回文本域的名称。
+readOnly	设置或返回文本域是否应是只读的。
+size	设置或返回文本域的尺寸。
+tabIndex	设置或返回文本域的 tab 键控制次序。
+type	返回文本域的表单元素类型。
+value	设置或返回文本域的 value 属性的值。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Text 对象方法
+方法	描述
+blur()	从文本域上移开焦点。
+focus()	在文本域上设置焦点。
+select()	选取文本域中的内容。
+
+
+
+HTML DOM Input Time 对象
+Input Time 对象
+Input Time 对象是 HTML5 中的新对象。
+
+Input Time 对象表示 HTML <input type="time"> 元素。
+
+注释：Internet Explorer 或 Firefox 不支持 <input type="time"> 元素。
+
+访问 Input Time 对象
+您可以通过使用 getElementById() 来访问 HTML <input type="time"> 元素：
+var x = document.getElementById("myTime");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 TIME 元素</h3>
+<p>我在<time id="myTime" datetime="2014-02-14">情人节</time>有个约会。</p>
+<p>点击按钮来获得以上 time 元素的日期。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>time 元素不会在浏览器中呈现任何特殊的样式。</p>
+<p><b>注释：</b>只有 Firefox 和 Opera 12 支持 dateTime 属性。</p>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myTime").dateTime;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+创建 Input Time 对象
+您可以通过使用 document.createElement() 方法来创建HTML <input type="time"> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "time");
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 TIME 元素</h3>
+<p>点击按钮来创建规定情人节日期(2014-02-14)的 TIME 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("TIME");
+x.setAttribute("datetime", "2014-02-14");
+var t = document.createTextNode("情人节");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input Time 对象属性
+属性	描述
+autocomplete	设置或返回 time 字段的 autocomplete 属性值。
+autofocus	设置或返回 time 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 time 字段的默认值。
+disabled	设置或返回 time 字段是否被禁用。
+form	返回对包含 time 字段的表单的引用。
+list	返回对包含 time 字段的 datalist 的引用。
+max	设置或返回 time 字段的 max 属性值。
+min	设置或返回 time 字段的 min 属性值。
+name	设置或返回 time 字段的 name 属性值。
+readOnly	设置或返回 time 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 time 字段。
+size	设置或返回 time 字段的 size 属性值。
+step	设置或返回 time 字段的 step 属性值。
+type	返回 time 字段的表单元素类型。
+value	设置或返回 time 字段的 value 属性值。
+
+
+
+HTML DOM Input URL 对象
+Input URL 对象
+Input URL 对象是 HTML5 中的新对象。
+Input URL 对象表示 HTML <input type="url"> 元素。
+注释：Internet Explorer 9（以及更早的版本）或 Safari 不支持 <input type="search"> 元素。
+
+访问 Input URL 对象
+您可以通过使用 getElementById() 来访问 <input type="url"> 元素：
+var x = document.getElementById("myUrl");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 URL 字段</h3>
+首页：<input type="url" id="myURL" value="http://www.google.com">
+<p>点击按钮来获得 URL 字段的 URL。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myURL").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Input URL 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="url"> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "url");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 URL 字段</h3>
+<p>点击按钮来创建 URL 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "url");
+    x.setAttribute("value", "http://www.google.com");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input URL 对象属性
+属性	描述
+autocomplete	设置或返回 Search 字段的 autocomplete 属性值。
+autofocus	设置或返回 Search 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 Search 字段的默认值。
+disabled	设置或返回 Search 字段是否被禁用。
+form	返回对包含 Search 字段的表单的引用。
+list	返回对包含 Search 字段的 datalist 的引用。
+maxLength	设置或返回 search 字段的 maxLength 属性值。
+multiple	设置或返回是否允许用户在 URL 字段中输入不止一条 url 地址。
+name	设置或返回 Search 字段的 name 属性值。
+pattern	设置或返回 Search 字段的 pattern 属性值。
+placeholder	设置或返回 Search 字段的 placeholder 属性值。
+readOnly	设置或返回 Search 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 Search 字段。
+size	设置或返回 Search 字段的 size 属性值。
+step	设置或返回 Search 字段的 step 属性值。
+type	返回 Search 字段的表单元素类型。
+value	设置或返回 Search 字段的 value 属性值。
+
+
+
+HTML DOM Input Week 对象
+Input Week 对象
+Input Week 对象是 HTML5 中的新对象。
+Input Week 对象表示 HTML <input type="week"> 元素。
+注释：Internet Explorer 或 Firefox 不支持 <input type="week"> 元素。
+
+访问 Input Week 对象
+您可以通过使用 getElementById() 来访问 <input type="week"> 元素：
+var x = document.getElementById("myWeek");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Input Week 字段</h3>
+<input type="week" id="myWeek" value="2014-W15">
+<p>点击按钮来获得 week 字段的周和年。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = document.getElementById("myWeek").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+提示：您也可以通过遍历表单的 elements 集合来访问 Input Week 对象。
+
+创建 Input Week 对象
+您可以通过使用 document.createElement() 方法来创建 <input type="week"> 元素：
+var x = document.createElement("INPUT");
+x.setAttribute("type", "week");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 Input Week 字段</h3>
+<p>点击按钮来创建 Week 字段。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "week");
+    x.setAttribute("value", "2000-W15");
+    document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Input Week 对象属性
+属性	描述
+autocomplete	设置或返回 week 字段的 autocomplete 属性值。
+autofocus	设置或返回 week 字段在页面加载后是否应自动获取焦点。
+defaultValue	设置或返回 week 字段的默认值。
+disabled	设置或返回 week 字段是否被禁用。
+form	返回对包含 week 字段的表单的引用。
+list	返回对包含 week 字段的 datalist 的引用。
+max	设置或返回 week 字段的 max 属性值。
+min	设置或返回 week 字段的 min 属性值。
+name	设置或返回 week 字段的 name 属性值。
+readOnly	设置或返回 week 字段是否是只读的。
+required	设置或返回在提交表单之前是否必须填写 week 字段。
+step	设置或返回 week 字段的 step 属性值。
+type	返回 week 字段的表单元素类型。
+value	设置或返回 week 字段的 value 属性值。
+
+
+
+HTML DOM Keygen 对象
+Keygen 对象
+Keygen 对象是 HTML5 中的新对象。
+Keygen 对象表示 HTML <keygen> 元素。
+
+访问 Keygen 对象
+您可以通过使用 getElementById() 来访问 <keygen> 元素：
+var x = document.getElementById("myKeygen");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Keygen 对象</h3>
+<keygen id="myKeygen" name="security">
+<p>点击按钮来禁用 keygen 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myKeygen");
+x.disabled = true;
+}
+</script>
+</body>
+</html>
+
+创建 Keygen 对象
+您可以通过使用 document.createElement() 方法来创建 <keygen> 元素：
+var x = document.createElement("KEYGEN");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 Keygen 对象</h3>
+<p>点击按钮来创建 KEYGEN 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("KEYGEN");
+x.setAttribute("name", "security");
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Keygen 对象属性
+属性	描述
+autofocus	设置或返回 keygen 在页面加载后是否应自动获取焦点。
+challenge	设置或返回 keygen 的 challenge 属性值。
+disabled	设置或返回 keygen 是否被禁用。
+form	返回对包含 keygen 的表单的引用。
+keytype	设置或返回 keygen 的 keytype 属性值。
+name	设置或返回 keygen 的 name 属性值。
+type	返回 keygen 的表单元素类型。
