@@ -1,0 +1,904 @@
+HTML DOM Quote 对象
+Quote 对象
+Quote 对象表示 HTML <q> 元素。
+
+访问 Quote 对象
+您可以通过使用 getElementById() 来访问 <q> 元素：
+var x = document.getElementById("myQuote");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 QUOTE 元素</h3>
+<p>Here is a quote from WWF's website:</p>
+<p>WWF's goal is to:
+<q id="myQuote" cite="http://www.wwf.org">
+Build a future where people live in harmony with nature.</q>
+We hope they succeed.
+</p> 
+<p>点击按钮来获得引用的 URL。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myQuote").cite;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Quote 对象
+您可以通过使用 document.createElement() 方法来创建 <q> 元素：
+var x = document.createElement("Q");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 QUOTE 元素</h3>
+<p>点击按钮来创建引用来源为 wwf.org 的 QUOTE 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("QUOTE");
+var t = document.createTextNode("Our goal is to build a future where people live in harmony with nature.");
+x.setAttribute("cite", "http://www.wwf.org");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Quote 对象属性
+属性	描述
+cite	设置或返回引用的 cite 属性值。
+
+
+
+HTML DOM Script 对象
+Script 对象
+Script 对象表示 HTML <script> 元素。
+
+访问 Script 对象
+您可以通过使用 getElementById() 来访问 <script> 元素：
+var x = document.getElementById("myScript");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 SCRIPT 元素</h3>
+<script id="myScript" src="/demo/demo_script_src.js"></script>
+<p>点击按钮来获得外部脚本文件的 URL。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myScript").src;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Script 对象
+您可以通过使用 document.createElement() 方法来创建 <script> 元素：
+var x = document.createElement("SCRIPT");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 SCRIPT 元素</h3>
+<p>点击按钮来创建输出 "Hello World!" 的 SCRIPT 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("SCRIPT");
+var t = document.createTextNode("alert('Hello World!')");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Script 对象属性
+属性	描述
+async	设置或返回是否脚本一旦可用，就应异步执行。
+charset	设置或返回脚本的 charset 属性值。
+cross Origin	设置或返回脚本的 CORS 设置。
+defer	设置或返回当页面完成解析后是否执行脚本。
+src	设置或返回脚本的 src 属性值。
+text	设置或返回属于脚本子节点的所有文本节点的内容。
+type	设置或返回脚本的 type 属性值。
+
+
+
+HTML DOM Select 对象
+Select 对象
+Select 对象代表 HTML 表单中的一个下拉列表。
+
+在 HTML 表单中，<select> 标签每出现一次，一个 Select 对象就会被创建。
+
+您可通过遍历表单的 elements[] 数组来访问某个 Select 对象，或者使用 document.getElementById()。
+
+Select 对象集合
+集合	描述
+options[]	返回包含下拉列表中的所有选项的一个数组。
+Select 对象属性
+属性	描述
+disabled	设置或返回是否应禁用下拉列表。
+form	返回对包含下拉列表的表单的引用。
+id	设置或返回下拉列表的 id。
+length	返回下拉列表中的选项数目。
+multiple	设置或返回是否选择多个项目。
+name	设置或返回下拉列表的名称。
+selectedIndex	设置或返回下拉列表中被选项目的索引号。
+size	设置或返回下拉列表中的可见行数。
+tabIndex	设置或返回下拉列表的 tab 键控制次序。
+type	返回下拉列表的表单类型。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Select 对象方法
+方法	描述
+add()	向下拉列表添加一个选项。
+blur()	从下拉列表移开焦点。
+focus()	在下拉列表上设置焦点。
+remove()	从下拉列表中删除一个选项。
+Select 对象事件句柄
+事件句柄	描述
+onchange	当改变选择时调用的事件句柄。
+
+
+
+HTML DOM Source 对象
+Source 对象
+Source 对象是 HTML5 中的新对象。
+
+Source 对象表示 HTML <source> 元素。
+
+访问 Source 对象
+您可以通过使用 getElementById() 来访问 <source> 元素：
+var x = document.getElementById("mySource");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 SOURCE 元素</h3>
+<audio controls>
+  <source id="mySource" src="/i/horse.mp3" type="audio/mpeg">
+  <source src="/i/horse.ogg" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+<p>点击按钮来获得媒体文件的 URL。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("mySource").src;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Source 对象
+您可以通过使用 document.createElement() 方法来创建 <source> 元素：
+var x = document.createElement("SOURCE");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 SOURCE 元素</h3>
+<p>点击按钮来创建两个 SOURCE 元素，并把它们添加到 AUDIO 元素。</p>
+<audio controls id="myAudio" autoplay>
+Your browser does not support the audio tag.
+</audio><br>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("SOURCE");
+x.setAttribute("src", "/i/horse.mp3");
+x.setAttribute("type", "audio/mpeg");
+document.getElementById("myAudio").appendChild(x);
+var y = document.createElement("SOURCE");
+y.setAttribute("src", "/i/horse.ogg");
+y.setAttribute("type", "audio/ogg");
+document.getElementById("myAudio").appendChild(y);
+document.getElementById("demo").innerHTML = "音频播放器可以工作了，点击播放按钮会听到一段声音。";
+}
+</script>
+</body>
+</html>
+
+Source 对象属性
+属性	描述
+media	设置或返回 <source> 元素中 media 属性的值。
+src	设置或返回 <source> 元素中 src 属性的值。
+type	设置或返回 <source> 元素中 type 属性的值。
+
+
+
+HTML DOM Style 对象
+Style 对象
+Style 对象代表一个单独的样式声明。可从应用样式的文档或元素访问 Style 对象。
+
+使用 Style 对象属性的语法：
+document.getElementById("id").style.property="值"
+Style 对象的属性：
+背景
+边框和边距
+布局
+列表
+杂项
+定位
+打印
+滚动条
+表格
+文本
+规范
+Background 属性
+属性	描述
+background	在一行中设置所有的背景属性
+backgroundAttachment	设置背景图像是否固定或随页面滚动
+backgroundColor	设置元素的背景颜色
+backgroundImage	设置元素的背景图像
+backgroundPosition	设置背景图像的起始位置
+backgroundPositionX	设置backgroundPosition属性的X坐标
+backgroundPositionY	设置backgroundPosition属性的Y坐标
+backgroundRepeat	设置是否及如何重复背景图像
+Border 和 Margin 属性
+属性	描述
+border	在一行设置四个边框的所有属性
+borderBottom	在一行设置底边框的所有属性
+borderBottomColor	设置底边框的颜色
+borderBottomStyle	设置底边框的样式
+borderBottomWidth	设置底边框的宽度
+borderColor	设置所有四个边框的颜色 (可设置四种颜色)
+borderLeft	在一行设置左边框的所有属性
+borderLeftColor	设置左边框的颜色
+borderLeftStyle	设置左边框的样式
+borderLeftWidth	设置左边框的宽度
+borderRight	在一行设置右边框的所有属性
+borderRightColor	设置右边框的颜色
+borderRightStyle	设置右边框的样式
+borderRightWidth	设置右边框的宽度
+borderStyle	设置所有四个边框的样式 (可设置四种样式)
+borderTop	在一行设置顶边框的所有属性
+borderTopColor	设置顶边框的颜色
+borderTopStyle	设置顶边框的样式
+borderTopWidth	设置顶边框的宽度
+borderWidth	设置所有四条边框的宽度 (可设置四种宽度)
+margin	设置元素的边距 (可设置四个值)
+marginBottom	设置元素的底边距
+marginLeft	设置元素的左边距
+marginRight	设置元素的右边据
+marginTop	设置元素的顶边距
+outline	在一行设置所有的outline属性
+outlineColor	设置围绕元素的轮廓颜色
+outlineStyle	设置围绕元素的轮廓样式
+outlineWidth	设置围绕元素的轮廓宽度
+padding	设置元素的填充 (可设置四个值)
+paddingBottom	设置元素的下填充
+paddingLeft	设置元素的左填充
+paddingRight	设置元素的右填充
+paddingTop	设置元素的顶填充
+Layout 属性
+属性	描述
+clear	设置在元素的哪边不允许其他的浮动元素
+clip	设置元素的形状
+content	设置元信息
+counterIncrement	设置其后是正数的计数器名称的列表。其中整数指示每当元素出现时计数器的增量。默认是1。
+counterReset	设置其后是正数的计数器名称的列表。其中整数指示每当元素出现时计数器被设置的值。默认是0。
+cssFloat	设置图像或文本将出现（浮动）在另一元素中的何处。
+cursor	设置显示的指针类型
+direction	设置元素的文本方向
+display	设置元素如何被显示
+height	设置元素的高度
+markerOffset	设置marker box的principal box距离其最近的边框边缘的距离
+marks	设置是否cross marks或crop marks应仅仅被呈现于page box边缘之外
+maxHeight	设置元素的最大高度
+maxWidth	设置元素的最大宽度
+minHeight	设置元素的最小高度
+minWidth	设置元素的最小宽度
+overflow	规定如何处理不适合元素盒的内容
+verticalAlign	设置对元素中的内容进行垂直排列
+visibility	设置元素是否可见
+width	设置元素的宽度
+List 属性
+属性	描述
+listStyle	在一行设置列表的所有属性
+listStyleImage	把图像设置为列表项标记
+listStylePosition	改变列表项标记的位置
+listStyleType	设置列表项标记的类型
+Positioning 属性
+属性	描述
+bottom	设置元素的底边缘距离父元素底边缘的之上或之下的距离
+left	置元素的左边缘距离父元素左边缘的左边或右边的距离
+position	把元素放置在static, relative, absolute 或 fixed 的位置
+right	置元素的右边缘距离父元素右边缘的左边或右边的距离
+top	设置元素的顶边缘距离父元素顶边缘的之上或之下的距离
+zIndex	设置元素的堆叠次序
+Printing 属性
+属性	描述
+orphans	设置段落留到页面底部的最小行数
+page	设置显示某元素时使用的页面类型
+pageBreakAfter	设置某元素之后的分页行为
+pageBreakBefore	设置某元素之前的分页行为
+pageBreakInside	设置某元素内部的分页行为
+size	设置页面的方向和尺寸
+widows	设置段落必须留到页面顶部的最小行数
+Scrollbar 属性 (IE-only)
+属性	描述
+scrollbar3dLightColor	设置箭头和滚动条左侧和顶边的颜色
+scrollbarArrowColor	设置滚动条上的箭头颜色
+scrollbarBaseColor	设置滚动条的底色
+scrollbarDarkShadowColor	设置箭头和滚动条右侧和底边的颜色
+scrollbarFaceColor	设置滚动条的表色
+scrollbarHighlightColor	设置箭头和滚动条左侧和顶边的颜色，以及滚动条的背景
+scrollbarShadowColor	设置箭头和滚动条右侧和底边的颜色
+scrollbarTrackColor	设置滚动条的背景色
+Table 属性
+属性	描述
+borderCollapse	设置表格边框是否合并为单边框，或者像在标准的HTML中那样分离。
+borderSpacing	设置分隔单元格边框的距离
+captionSide	设置表格标题的位置
+emptyCells	设置是否显示表格中的空单元格
+tableLayout	设置用来显示表格单元格、行以及列的算法
+Text 属性
+属性	描述
+color	设置文本的颜色
+font	在一行设置所有的字体属性
+fontFamily	设置元素的字体系列。
+fontSize	设置元素的字体大小。
+fontSizeAdjust	设置/调整文本的尺寸
+fontStretch	设置如何紧缩或伸展字体
+fontStyle	设置元素的字体样式
+fontVariant	用小型大写字母字体来显示文本
+fontWeight	设置字体的粗细
+letterSpacing	设置字符间距
+lineHeight	设置行间距
+quotes	设置在文本中使用哪种引号
+textAlign	排列文本
+textDecoration	设置文本的修饰
+textIndent	缩紧首行的文本
+textShadow	设置文本的阴影效果
+textTransform	对文本设置大写效果
+unicodeBidi	 
+whiteSpace	设置如何设置文本中的折行和空白符
+wordSpacing	设置文本中的词间距
+标准属性
+属性	描述
+dir	设置或返回文本的方向
+lang	设置或返回元素的语言代码
+title	设置或返回元素的咨询性的标题
+cssText 属性
+它是一组样式属性及其值的文本表示。这个文本格式化为一个 CSS 样式表，去掉了包围属性和值的元素选择器的花括号。
+
+将这一属性设置为非法的值将会抛出一个代码为 SYNTAX_ERR 的 DOMException 异常。当 CSS2Properties 对象是只读的时候，试图设置这一属性将会抛出一个代码为 NO_MODIFICATION_ALLOWED_ERR 的 DOMException 异常。
+
+关于 CSS2Properties 对象
+CSS2Properties 对象表示一组 CSS 样式属性及其值。它为 CSS 规范定义的每一个 CSS 属性都定义一个 JavaScript 属性。
+
+一个 HTMLElement 的 style 属性是一个可读可写的 CSS2Properties 对象，就好像 CSSRule 对象的 style 属性一样。不过，Window.getComputedStyle() 的返回值是一个 CSS2Properties 对象，其属性是只读的。
+
+
+
+HTML DOM Table 对象
+Table 对象
+Table 对象代表一个 HTML 表格。
+
+在 HTML 文档中 <table> 标签每出现一次，一个 Table 对象就会被创建。
+
+Table 对象集合
+集合	描述
+cells[]	返回包含表格中所有单元格的一个数组。
+rows[]	返回包含表格中所有行的一个数组。
+tBodies[]	返回包含表格中所有 tbody 的一个数组。
+Table 对象属性
+属性	描述
+align	表在文档中的水平对齐方式。（已废弃）
+bgColor	表的背景颜色。（已废弃）
+border	设置或返回表格边框的宽度。
+caption	对表格的 <caption> 元素的引用。
+cellPadding	设置或返回单元格内容和单元格边框之间的空白量。
+cellSpacing	设置或返回在表格中的单元格之间的空白量。
+frame	设置或返回表格的外部边框。
+id	设置或返回表格的 id。
+rules	设置或返回表格的内部边框（行线）。
+summary	设置或返回对表格的描述（概述）。
+tFoot	返回表格的 TFoot 对象。如果不存在该元素，则为 null。
+tHead	返回表格的 THead 对象。如果不存在该元素，则为 null。
+width	设置或返回表格的宽度。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Table 对象方法
+方法	描述
+createCaption()	为表格创建一个 caption 元素。
+createTFoot()	在表格中创建一个空的 tFoot 元素。
+createTHead()	在表格中创建一个空的 tHead 元素。
+deleteCaption()	从表格删除 caption 元素以及其内容。
+deleteRow()	从表格删除一行。
+deleteTFoot()	从表格删除 tFoot 元素及其内容。
+deleteTHead()	从表格删除 tHead 元素及其内容。
+insertRow()	在表格中插入一个新行。
+
+
+
+HTML DOM TableCell 对象
+TableCell 对象
+TableCell 对象代表一个 HTML 表格单元格。
+
+在一个 HTML 文档中 <td> 标签每出现一次，一个 TableCell 对象就会被创建。
+
+TableCell 对象属性
+属性	描述
+abbr	设置或返回单元格中内容的缩写版本。
+align	设置或返回单元格内部数据的水平排列方式。
+axis	设置或返回相关单元格的一个逗号分隔的列表。
+cellIndex	返回单元格在某行的单元格集合中的位置。
+ch	设置或返回单元格的对齐字符。
+chOff	设置或返回单元格的对齐字符的偏移量。
+colSpan	单元格横跨的列数。
+headers	设置或返回 header-cell 的 id 值。
+id	设置或返回单元格的 id。
+innerHTML	设置或返回单元格的开始标签和结束标签之间的 HTML。
+rowSpan	设置或返回单元格可横跨的行数。
+scope	设置或返回此单元格是否可提供标签信息。
+vAlign	设置或返回表格单元格内数据的垂直排列方式。
+width	设置或返回单元格的宽度。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+
+
+
+HTML DOM TableHeader 对象
+TableHeader 对象
+TableHeader 对象是 HTML5 中的新对象。
+
+TableHeader 对象表示 HTML <th> 元素。
+
+访问 TableHeader 对象
+您可以通过使用 getElementById() 来访问 <th> 元素：
+var x = document.getElementById("myTh");
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td
+{
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<h3>演示如何访问 TH 元素</h3>
+<table>
+ <tr>
+   <th id="myTh">名字</th>
+ </tr>
+ <tr>
+   <td>乔布斯</td>
+ </tr>
+</table>
+<p>点击按钮来改变 TH 元素的文本。</p>
+<button onclick="myFunction()">亲自试一试</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myTh");
+x.innerHTML = "新的表头";
+}
+</script>
+</body>
+</html>
+
+创建 TableHeader 对象
+您可以通过使用 document.createElement() 方法来创建 <th> 元素：
+var x = document.createElement("TH");
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th
+{
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<table id="myTable">
+  <tr id="myTr">
+  </tr>
+</table>
+<h3>演示如何创建 TH 元素</h3>
+<p>点击按钮来创建 TH 元素。</p>
+<button onclick="myFunction()">亲自试一试</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("TH");
+var t = document.createTextNode("新的表头");
+x.appendChild(t);
+document.getElementById("myTr").appendChild(x);
+}
+</script>
+</body>
+</html>
+
+TableHeader 对象属性
+属性	描述
+abbr	设置或返回 abbr 属性值。
+align	
+HTML5 中不支持。请使用 style.textAlign 代替。
+设置或返回数据单元中内容的水平对齐方式。
+
+axis	
+HTML5 中不支持。
+设置或返回相关联数据单元的以逗号分隔列表。
+
+background	
+HTML5 中不支持。请使用 style.background 代替。
+设置或返回数据单元的背景图像。
+
+bgColor	
+HTML5 中不支持。请使用 style.backgroundColor 代替。
+设置或返回表格的背景色。
+
+cellIndex	返回表格行 cells 集合中单元的位置。
+ch	
+HTML5 中不支持。
+设置或返回数据单元的对齐字符。
+
+chOff	
+HTML5 中不支持。
+设置或返回 ch 属性的水平偏移。
+
+colSpan	设置或返回 colspan 属性值。
+headers	设置或返回 headers 属性值。
+height	
+HTML5 中不支持。请使用 style.height 代替。
+设置或返回数据单元的高度。
+
+noWrap	
+HTML5 中不支持。请使用 style.whiteSpace 代替。
+设置或返回单元内的内容是否能够折行。
+
+rowSpan	设置或返回 rowspan 属性值。
+vAlign	
+HTML5 中不支持。请使用 style.verticalAlign 代替。
+设置或返回单元内容的垂直对齐方式。
+
+width	
+HTML5 中不支持。请使用 style.width 代替。
+设置或返回数据单元的宽度。
+
+
+
+HTML DOM TableRow 对象
+TableRow 对象
+TableRow 对象代表一个 HTML 表格行。
+
+在 HTML 文档中 <tr> 标签每出现一次，一个 TableRow 对象就会被创建。
+
+TableRow 对象集合
+集合	描述
+cells[]	返回包含行中所有单元格的一个数组。
+TableRow 对象属性
+属性	描述
+align	设置或返回在行中数据的水平排列。
+ch	设置或返回在行中单元格的对齐字符。
+chOff	设置或返回在行中单元格的对齐字符的偏移量。
+id	设置或返回行的 id。
+innerHTML	设置或返回行的开始标签和结束标签之间的 HTML。
+rowIndex	返回该行在表中的位置。
+sectionRowIndex	返回在 tBody 、tHead 或 tFoot 中，行的位置。
+vAlign	设置或返回在行中的数据的垂直排列方式。
+TableRow 对象方法
+方法	描述
+deleteCell()	删除行中的指定的单元格。
+insertCell()	在一行中的指定位置插入一个空的 <td> 元素。
+
+
+
+HTML DOM Textarea 对象
+Textarea 对象
+Textarea 对象代表 HTML 表单中的一个文本区 (text-area)。在表单中 <textarea> 标签每出现一次，一个 Textarea 对象就会被创建。
+
+您可以通过索引相应表单的元素数组来访问某个 Textarea 对象，或者使用 getElementById()。
+
+Textarea Object Properties
+属性	描述
+accessKey	设置或返回访问 textarea 的键盘快捷键。
+cols	设置或返回 textarea 的宽度。
+defaultValue	设置或返回文本框中的初始内容。
+disabled	设置或返回 textarea 是否应当被禁用。
+form	返回对包含该 textarea 的表单对象的引用。
+id	设置或返回某个 textarea 的 id。
+name	设置或返回 textarea 的名称。
+readOnly	设置或返回 textarea 是否应当是只读的。
+rows	设置或返回 textarea 的高度。
+tabIndex	设置或返回 textarea 的 tab 键控制次序。
+type	返回该文本框的表单类型。
+value	设置或返回在 textarea 中的文本。
+标准属性
+属性	描述
+className	设置或返回元素的 class 属性。
+dir	设置或返回文本的方向。
+lang	设置或返回元素的语言代码。
+title	设置或返回元素的 title 属性。
+Textarea 对象方法
+方法	描述
+blur()	从 textarea 移开焦点。
+focus()	在 textarea 上设置焦点。
+select()	选择 textarea 中的文本。
+Textarea 对象事件句柄
+事件句柄	描述
+onchange	当输入值改变时调用的事件句柄
+
+
+
+HTML DOM Time 对象
+Time 对象
+Time 对象是 HTML5 中的新对象。
+
+Time 对象表示 HTML <time> 元素。
+
+访问 Time 对象
+您可以通过使用 getElementById() 来访问 <time> 元素：
+var x = document.getElementById("mySource");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 TIME 元素</h3>
+<p>我在<time id="myTime" datetime="2014-02-14">情人节</time>有个约会。</p>
+<p>点击按钮来获得以上 time 元素的日期。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<p><b>注释：</b>time 元素不会在浏览器中呈现任何特殊的样式。</p>
+<p><b>注释：</b>只有 Firefox 和 Opera 12 支持 dateTime 属性。</p>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myTime").dateTime;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Time 对象
+您可以通过使用 document.createElement() 方法来创建 <time> 元素：
+var x = document.createElement("SOURCE");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 TIME 元素</h3>
+<p>点击按钮来创建规定情人节日期(2014-02-14)的 TIME 元素。</p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("TIME");
+x.setAttribute("datetime", "2014-02-14");
+var t = document.createTextNode("情人节");
+x.appendChild(t);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
+
+Time 对象属性
+属性	描述
+dateTime	设置或返回 <time> 元素中 datetime 属性的值。
+
+
+
+HTML DOM Title 对象
+Title 对象
+Title 对象表示 HTML <title> 元素。
+
+访问 Title 对象
+您可以通过使用 getElementById() 来访问 <title> 元素：
+var x = document.getElementById("myTitle");
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML DOM Time 对象</title>
+</head>
+<body>
+<h3>演示如何访问 TITLE 元素</h3>
+<p>点击按钮来获得文档标题的文本。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementsByTagName("TITLE")[0].text;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Title 对象
+您可以通过使用 document.createElement() 方法来创建 <title> 元素：
+var x = document.createElement("TITLE");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 TITLE 元素</h3>
+<p>点击按钮来创建 TITLE 元素。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.createElement("TITLE");
+var t = document.createTextNode("HTML DOM Objects");
+x.appendChild(t);
+document.head.appendChild(x);
+document.getElementById("demo").innerHTML="您已经在文档的 HEAD 部分创建了一个 TITLE 元素。";
+}
+</script>
+</body>
+</html>
+
+Title 对象属性
+属性	描述
+text	设置或返回文档标题的文本。
+
+
+
+HTML DOM Track 对象
+Track 对象
+Track 对象是 HTML5 中的新对象。
+
+Track 对象表示 HTML <track> 元素。
+
+访问 Track 对象
+您可以通过使用 getElementById() 来访问 <track> 元素：
+
+var x = document.getElementById("myTrack");
+创建 Track 对象
+您可以通过使用 document.createElement() 方法来创建 <track> 元素：
+
+var x = document.createElement("TRACK");
+Track 对象属性
+属性	描述
+default	设置或返回轨道的默认状态。
+kind	设置或返回轨道的 kind 属性值。
+label	设置或返回轨道的 label 属性值。
+readyState	返回轨道资源的当前状态。
+src	设置或返回轨道的 src 属性值。
+srclang	设置或返回轨道的 srclang 属性值。
+track	返回表示 track 元素文本轨道数据的 TextTrack 对象。
+
+
+
+HTML DOM Video 对象
+Video 对象
+Video 对象是 HTML5 中的新对象。
+
+Video 对象表示 HTML <video> 元素。
+
+访问 Video 对象
+您可以通过使用 getElementById() 来访问 <video> 元素：
+var x = document.getElementById("myVideo");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何访问 VIDEO 元素</h3>
+<video id="myVideo" width="320" height="240" controls>
+  <source src="/i/movie.mp4" type="video/mp4">
+  <source src="/i/movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<p>请点击按钮来获得以秒计的视频时长。</p>
+<p id="demo"></p>
+<button onclick="myFunction()">试一下</button>
+<script>
+function myFunction()
+{
+var x = document.getElementById("myVideo").duration;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
+
+创建 Video 对象
+您可以通过使用 document.createElement() 方法来创建 <video> 元素：
+var x = document.createElement("VIDEO");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h3>演示如何创建 VIDEO 元素</h3>
+<p>请点击按钮来创建 VIDEO 元素，该元素将播放 .ogg 文件格式的影片。</p>
+<button onclick="myFunction()">试一下</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var x = document.createElement("VIDEO");
+x.setAttribute("width", "320");
+x.setAttribute("height", "240");
+x.setAttribute("controls", "controls");
+x.setAttribute("src", "/i/movie.ogg");
+document.body.appendChild(x);
+document.getElementById("demo").innerHTML = "<b>注释：</b>IE 和 Safari 不支持 .ogg 文件格式。这只是一个例子。如需使其在所有浏览器中运行，您应该在 video 元素中使用 source 元素。";
+}
+</script>
+</body>
+</html>
+
+Video 对象属性
+属性	描述
+audioTracks	返回表示可用音频轨道的 AudioTrackList 对象。
+autoplay	设置或返回是否在就绪（加载完成）后随即播放视频。
+buffered	返回表示视频已缓冲部分的 TimeRanges 对象。
+controller	返回表示视频当前媒体控制器的 MediaController 对象。
+controls	设置或返回视频是否应该显示控件（比如播放/暂停等）。
+crossOrigin	设置或返回视频的 CORS 设置。
+currentSrc	返回当前视频的 URL。
+currentTime	设置或返回视频中的当前播放位置（以秒计）。
+defaultMuted	设置或返回视频默认是否静音。
+defaultPlaybackRate	设置或返回视频的默认播放速度。
+duration	返回视频的长度（以秒计）。
+ended	返回视频的播放是否已结束。
+error	返回表示视频错误状态的 MediaError 对象。
+height	设置或返回视频的 height 属性的值。
+loop	设置或返回视频是否应在结束时再次播放。
+mediaGroup	设置或返回视频所属媒介组合的名称。
+muted	设置或返回是否关闭声音。
+networkState	返回视频的当前网络状态。
+paused	设置或返回视频是否暂停。
+playbackRate	设置或返回视频播放的速度。
+played	返回表示视频已播放部分的 TimeRanges 对象。
+poster	设置或返回视频的 poster 属性的值。
+preload	设置或返回视频的 preload 属性的值。
+readyState	返回视频当前的就绪状态。
+seekable	返回表示视频可寻址部分的 TimeRanges 对象。
+seeking	返回用户当前是否正在视频中进行查找。
+src	设置或返回视频的 src 属性的值。
+startDate	返回表示当前时间偏移的 Date 对象。
+textTracks	返回表示可用文本轨道的 TextTrackList 对象。
+videoTracks	返回表示可用视频轨道的 VideoTrackList 对象。
+volume	设置或返回视频的音量。
+width	设置或返回视频的 width 属性的值。
+Video 对象方法
+方法	描述
+addTextTrack()	向视频添加新的文本轨道。
+canPlayType()	检查浏览器是否能够播放指定的视频类型。
+load()	重新加载视频元素。
+play()	开始播放视频。
+pause()	暂停当前播放的视频。
